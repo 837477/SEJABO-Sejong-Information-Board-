@@ -1,37 +1,37 @@
 /*템플릿 뜯어올 때 폰트임 현재는 유지 시켜놓았는데 나중에 구글 폰트를 통해서 수정 해야함.*/
 @font-face {
   font-family: Poppins-Regular;
-  src: url('../fonts/poppins/Poppins-Regular.ttf'); 
+  src: url('/static/fonts/poppins/Poppins-Regular.ttf'); 
 }
 
 @font-face {
   font-family: Poppins-Bold;
-  src: url('../fonts/poppins/Poppins-Bold.ttf'); 
+  src: url('/static/fonts/poppins/Poppins-Bold.ttf'); 
 }
 
 @font-face {
   font-family: Poppins-Medium;
-  src: url('../fonts/poppins/Poppins-Medium.ttf'); 
+  src: url('/static/fonts/poppins/Poppins-Medium.ttf'); 
 }
 
 @font-face {
   font-family: Raleway-Regular;
-  src: url('../fonts/raleway/Raleway-Regular.ttf'); 
+  src: url('/static/fonts/raleway/Raleway-Regular.ttf'); 
 }
 
 @font-face {
   font-family: Raleway-Black;
-  src: url('../fonts/raleway/Raleway-Black.ttf'); 
+  src: url('/static/fonts/raleway/Raleway-Black.ttf'); 
 }
 
 @font-face {
   font-family: Raleway-SemiBold;
-  src: url('../fonts/raleway/Raleway-SemiBold.ttf'); 
+  src: url('/static/fonts/raleway/Raleway-SemiBold.ttf'); 
 }
 
 @font-face {
   font-family: Raleway-Bold;
-  src: url('../fonts/raleway/Raleway-Bold.ttf'); 
+  src: url('/static/fonts/raleway/Raleway-Bold.ttf'); 
 }
 
 
@@ -44,7 +44,9 @@
 
 body, html {
 	height: 100%;
-	font-family: Poppins-Regular, sans-serif;
+  font-family: Poppins-Regular, sans-serif;
+  background-color: #BFD7F4;
+  z-index: -1;
 }
 
 /*부분 요소 스타일 템플릿 디자인을 유지*/
@@ -184,7 +186,7 @@ iframe {
   align-items: center;
   padding: 15px;
   position: relative;
-  background-image: url('../images/img-01.jpg');
+  background-image: url('/static/img/img-01.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -234,7 +236,7 @@ iframe {
 .login100-form-title {
   font-family: Raleway-Black;
   font-size: 30px;
-  color: #333333;
+  color: white;
   line-height: 1.2;
   text-transform: uppercase;
   text-align: center;
@@ -408,7 +410,7 @@ margin-bottom: 16px;
   width: 100%;
   height: 62px;
   border-radius: 3px;
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgba(100,100,100,0.9);
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -583,19 +585,103 @@ margin-bottom: 16px;
     display: none;
 }
 
-
-body {
-         background-image: url("../images/sejong.jpg");
+.board1 {
+  background-image: url("/static/img/sejong.jpg");
+        opacity: 0.8;
          background-size: cover;
-      }
-      #board {
-          opacity: 0.5;
          position: absolute;
-         width: 97%;
-         height: 86%;
-         top: 50%;
-         left: 50%;
-         transform: translate(-50%, -45%);
-         background-color: rgb(255, 255, 255);
-         box-shadow: 0px 8px 12px #222222;
+         width: 99%;
+         height: 97%;
+          top: 1.5%;
+          left: 0.5%;
+         box-shadow: 0 1.5px 12px black;
+          z-index: 100;
       }
+
+.menu_1
+{
+    background-color: black;
+    opacity: 0.8;
+    padding:25px 25px 0px 25px;
+    border:0px;
+    z-index:300;
+    position: fixed;
+    left: 2%;
+    width: 880px;
+    height: 120px;
+    margin:auto;
+    top: -90px;
+    border-radius: 0px 0px 8px 8px;
+    transition: top 0.3s;
+}
+.menu_1_open
+{
+    top:0px;
+}
+
+.menu_login
+{
+    background-color: rgba(0, 0, 0, 0.8);
+    padding:25px 25px 0px 25px;
+    border:0px;
+    left:0.5;
+    z-index:300;
+    position: fixed;
+    right: 2%;
+    width: 400px;
+    height: 420px;
+    margin:auto;
+    top: -390px;
+    border-radius: 0px 0px 8px 8px;
+    transition: top 0.4s;
+}
+
+.menu_login_open
+{
+    top: 0px;
+}
+
+.fa
+{
+    text-align: center;
+    color: white;
+    margin: 0 10px;
+}
+
+.fa-angle-down
+{
+  margin-top: 15px;
+  display:block;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  transition: transform 1s;
+}
+#angle-down2
+{
+  margin-top: 30px;
+}
+
+.fa-angle-rotate
+{
+  transform: rotateX(150deg);
+}
+
+.icon_sub
+{
+    font-size: 18px;
+}
+
+.mouse_pointer
+{
+  cursor:pointer;
+}
+
+[id^=box]
+{
+  z-index: 250;
+}
+
+[id^=box]:hover {
+  transform: scale(1.03, 1.03);
+}

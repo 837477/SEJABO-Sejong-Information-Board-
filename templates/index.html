@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>SEJABO</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="icon" type="image/png" href="../static/img/icons/favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="../static/vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../static/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../static/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+	<link rel="stylesheet" type="text/css" href="../static/vendor/animate/animate.css">
+	<link rel="stylesheet" type="text/css" href="../static/vendor/css-hamburgers/hamburgers.min.css">
+	<link rel="stylesheet" type="text/css" href="../static/vendor/select2/select2.min.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/main.css">
+</head>
+
+<body>
+	<!-- The Modal -->
+	<div id="myModal" class="modal modal_display_none">
+
+		<!-- Modal content -->
+		<div class="modal-content">
+			<span class="close"></span>
+			<div class="container-login100">
+				<div class="wrap-login100">
+
+					<form id="seja_login" class="login100-form validate-form none_display">
+						<span class="login100-form-title">
+							SE JA BOARD
+						</span>
+
+						<div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+							<input class="input100" type="text" name="email" placeholder="Student Number">
+							<span class="focus-input100"></span>
+							<span class="symbol-input100">
+								<span class="lnr lnr-envelope"></span>
+							</span>
+						</div>
+
+						<div class="wrap-input100 validate-input" data-validate="Password is required">
+							<input class="input100" type="password" name="pass" placeholder="Password">
+							<span class="focus-input100"></span>
+							<span class="symbol-input100">
+								<span class="lnr lnr-lock"></span>
+							</span>
+						</div>
+
+						<div class="container-login100-form-btn">
+							<button class="login100-form-btn">
+								Login
+							</button>
+
+						</div>
+
+						<div class="space"></div>
+						<button id="sejabo_login" onclick="go_back();">Back</button>
+					</form> <!-- 이 form 태그는 나중에 ajax작업시 div로 변경할 것임.-->
+
+
+					<div id="information">
+						<span class="login100-form-title">
+							sejong information board
+						</span>
+						<img class="sejong_logo" src="../static/img/SejongLOGO.png">
+						<br>
+						<br>
+						<button id="myBtn">GO BOARD</button>
+						<button id="sejabo_login" onclick="login();">LOGIN</button>
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="board1" class="board1"></div>
+
+	<div id="menu_1" class="menu_1 mouse_pointer" onclick="menu_1();">
+		<i class="fa fa-3x fa-building-o"><span class="icon_sub"> 세종이노센터</span></i>
+
+		<i class="fa fa-3x fa-building-o"><span class="icon_sub"> 학술정보원</span></i>
+
+		<i class="fa fa-3x fa-building-o"><span class="icon_sub"> 광개토관</span></i>
+
+		<i class="fa fa-3x fa-building-o"><span class="icon_sub"> 율곡관</span></i>
+
+		<i class="fa fa-3x fa-building-o"><span class="icon_sub"> 충무관</span></i>
+
+		<i class="fa fa-3x fa-building-o"><span class="icon_sub"> 군자관</span></i>
+
+		<i id="angle-down1" class="fa fa-angle-down" aria-hidden="true"></i>
+	</div>
+
+	<div id="menu_login" class="menu_login mouse_pointer" onclick="menu_login();">
+		<span class="login100-form-title">
+			Login
+		</span>
+
+		<div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+			<input class="input100" type="text" name="email" placeholder="Student Number">
+			<span class="focus-input100"></span>
+			<span class="symbol-input100">
+				<span class="lnr lnr-envelope"></span>
+			</span>
+		</div>
+
+		<div class="wrap-input100 validate-input" data-validate="Password is required">
+			<input class="input100" type="password" name="pass" placeholder="Password">
+			<span class="focus-input100"></span>
+			<span class="symbol-input100">
+				<span class="lnr lnr-lock"></span>
+			</span>
+		</div>
+
+		<div class="container-login100-form-btn">
+			<button class="login100-form-btn">
+				Login
+			</button>
+		</div>
+		<i id="angle-down2" class="fa fa-angle-down" aria-hidden="true"></i>
+	</div>
+
+
+</body>
+<script src="../static/vendor/jquery/jquery-3.2.1.min.js"></script>
+<script src="../static/vendor/bootstrap/js/popper.js"></script>
+<script src="../static/vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="../static/vendor/select2/select2.min.js"></script>
+<script src="../static/js/modal.js"></script>
+<script src="../static/js/main.js"></script>
+<script src="../static/js/board.js"></script>
+<script src="../static/js/function.js"></script>
+
+</html>
