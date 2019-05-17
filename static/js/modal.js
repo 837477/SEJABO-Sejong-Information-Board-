@@ -5,6 +5,7 @@ if(check_ != "ok")
         sessionStorage.setItem("count", "ok");
     }
 
+
 // Get the modal
         var modal = document.getElementById('myModal');
  
