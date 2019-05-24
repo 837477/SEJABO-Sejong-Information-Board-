@@ -6,8 +6,9 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link rel="icon" type="image/png" href="../static/img/icons/favicon.ico"/>
+	<meta name="theme-color" content="#c6f3d5">
 
+	<link rel="icon" type="image/png" href="../static/img/icons/favicon.ico"/>
 	
 	<link rel="stylesheet" type="text/css" href="../static/vendor/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="../static/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
@@ -16,7 +17,7 @@
 	<link rel="stylesheet" type="text/css" href="../static/vendor/css-hamburgers/hamburgers.min.css">
 	<link rel="stylesheet" type="text/css" href="../static/vendor/select2/select2.min.css">
 	<link rel="stylesheet" type="text/css" href="../static/css/main.css">
-	
+	<link rel="stylesheet" type="text/css" href="../static/css/loading.css">
 	<link rel="stylesheet" href="../static/css/magic/dist/magic.css">
 	
 	
@@ -24,18 +25,18 @@
 
 <body>
 	<!-- The Modal -->
-	<div id="myModal" class="modal">
+	<div id="main_modal" class="modal">
 		<div class="modal-content">
 			<span class="close"></span>
 			<div class="container-login100">
-				<div class="wrap-login100">
+				<div id="main_modal_content" class="wrap-login100">
 					<div id="information1" class="info show_display">
 						<div class="login100-form-title">
 							우리들의 대자보<br>SEJABO
 						</div>
 						<br>
 						<br>
-						<img class="sejong_logo" src="../static/img/SejaboLOGO.png">
+						<img id="draggable-revert" class="sejong_logo" src="../static/img/SejaboLOGO.png">
 						<br>
 						<br>
 						<br>
@@ -60,11 +61,44 @@
 					</div>
 					<i id="explain_gobutton1" class="fa fa-angle-right"></i>
 					<i id="explain_gobutton2" class="fa fa-angle-left none_display"></i>	
-					<button id="myBtn">살펴보다</button>
+					<button id="close_modal_btn" class="go_main_Btn">살펴보다</button>
 				</div>
+
+				<div class="cssload-loader-inner">
+						<div class="cssload-cssload-loader-line-wrap-wrap">
+							<div class="cssload-loader-line-wrap"></div>
+						</div>
+						<div class="cssload-cssload-loader-line-wrap-wrap">
+							<div class="cssload-loader-line-wrap"></div>
+						</div>
+						<div class="cssload-cssload-loader-line-wrap-wrap">
+							<div class="cssload-loader-line-wrap"></div>
+						</div>
+						<div class="cssload-cssload-loader-line-wrap-wrap">
+							<div class="cssload-loader-line-wrap"></div>
+						</div>
+						<div class="cssload-cssload-loader-line-wrap-wrap">
+							<div class="cssload-loader-line-wrap"></div>
+						</div>
+				</div>
+
 			</div>
 		</div>
 	</div>
+
+
+	<!--
+	<div id="loading_modal" class="modal">
+		<div class="modal-content">
+			<span class="close"></span>
+			<div class="container-login100">
+					
+			</div>
+		</div>
+	</div>
+	-->
+
+
 
 	<div id="board1" class="board1"></div>
 	<div id="select">

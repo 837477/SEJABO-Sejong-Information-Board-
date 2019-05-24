@@ -24,7 +24,7 @@ $('#board1').click(function(e)
 });
 
 $('#explain_gobutton1').click(function()
-{
+{ //디스플레이 논을 버튼 2에서 버튼1꺼를 논시키는 형식으로 가야함.
     $('#information1').addClass("magictime");
     $('#information1').addClass("rotateLeft");
     $('#explain_gobutton1').removeClass("show_display");
