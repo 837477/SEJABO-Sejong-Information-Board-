@@ -16,45 +16,67 @@
 	<link rel="stylesheet" type="text/css" href="../static/vendor/css-hamburgers/hamburgers.min.css">
 	<link rel="stylesheet" type="text/css" href="../static/vendor/select2/select2.min.css">
 	<link rel="stylesheet" type="text/css" href="../static/css/main.css">
+	
+	<link rel="stylesheet" href="../static/css/magic/dist/magic.css">
+	
+	
 </head>
 
 <body>
 	<!-- The Modal -->
 	<div id="myModal" class="modal">
-
-		<!-- Modal content -->
 		<div class="modal-content">
 			<span class="close"></span>
 			<div class="container-login100">
 				<div class="wrap-login100">
-					<div id="information">
-						<span class="login100-form-title">
-							SE JA BO
-						</span>
-						<img class="sejong_logo" src="../static/img/SejongLOGO.png">
+					<div id="information1" class="info show_display">
+						<div class="login100-form-title">
+							우리들의 대자보<br>SEJABO
+						</div>
+						<br>
+						<br>
+						<img class="sejong_logo" src="../static/img/SejaboLOGO.png">
 						<br>
 						<br>
 						<br>
-						<br>
-						<button id="myBtn">GO BOARD</button>
 					</div>
-
-
+					<div id="information2"  class="info2 none_display">
+						<div class="login100-form-title">
+							SEJABO
+						</div>
+						<hr>
+						<br>
+						<div class="login100-form-body">
+							<span style="color: red">언제</span>  <span style="color: purple">어디</span>서나!
+						</div>
+						<br>
+						<div class="login100-form-body">
+							<span style="color: skyblue">홍보</span>를 <span style="color: green">쉽게!</span>
+						</div>
+						<br>
+						<div class="login100-form-body">
+								<span style="color: orange">실시간</span>으로!
+						</div>
+					</div>
+					<i id="explain_gobutton1" class="fa fa-angle-right"></i>
+					<i id="explain_gobutton2" class="fa fa-angle-left none_display"></i>	
+					<button id="myBtn">살펴보다</button>
 				</div>
 			</div>
 		</div>
 	</div>
 
 	<div id="board1" class="board1"></div>
-
-	<div id="menu_1" class="menu_1 mouse_pointer">
+	<div id="select">
+	</div>
+	<div id="menu_1" class="menu_1">
 		<div class="login_test">
-				<span class="login100-form-title" style="color: black;">
-					Login
+				<span class="login100-form-title2" style="color: black;">
+					로그인
 				</span>
-		
+				<br>
 				<div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
-					<input class="input100" type="text" name="email" placeholder="Student Number">
+					<input class="input100" type="text" name="email" placeholder="학번/사번 입력">
 					<span class="focus-input100"></span>
 					<span class="symbol-input100">
 						<span class="lnr lnr-envelope"></span>
@@ -62,7 +84,7 @@
 				</div>
 		
 				<div class="wrap-input100 validate-input" data-validate="Password is required">
-					<input class="input100" type="password" name="pass" placeholder="Password">
+					<input class="input100" type="password" name="pass" placeholder="비밀번호 입력">
 					<span class="focus-input100"></span>
 					<span class="symbol-input100">
 						<span class="lnr lnr-lock"></span>
@@ -71,27 +93,26 @@
 		
 				<div class="container-login100-form-btn">
 					<button class="login100-form-btn">
-						Login
+						확인
 					</button>
 				</div>
-				<!--<i id="angle-down2" class="fa fa-angle-down" aria-hidden="true" onclick="menu_login();"></i>-->
+		</div>
+		<form action="" class="search_bar">
+			<input type="search" placeholder="찾고싶은 것이 있나요?">
+			<i class="fa fa-search"></i>
+		</form>
+		<div class="menu1_button mouse_pointer" onclick="menu_1();" aria-hidden="true">
+			<i id="angle-down" class="fa fa-angle-down"></i>
 		</div>
 	</div>
-
-
-	<div class="select_location">
-		<i id="angle-down1" class="fa fa-angle-up" onclick="menu_1();" aria-hidden="true"></i>
-
-		<i class="fa fa-3x fa-building-o"><span class="icon_sub"> 세종이노센터</span></i>
-
-		<i class="fa fa-3x fa-building-o"><span class="fa icon_sub"> 학술정보원</span></i>
-
-		<i class="fa fa-3x fa-building-o"><span class="fa icon_sub"> 광개토관</span></i>
-
-		<i class="fa fa-3x fa-building-o"><span class="icon_sub"> 율곡관</span></i>
-
-		
+	<div id="new_page">
 	</div>
+	<!--
+		<div class="mouse_pointer icon_sub_button"><i class="fa fa-3x fa-building-o"><span class="fa icon_sub"> 세종이노센터</span></i></div>
+		<div class="mouse_pointer icon_sub_button"><i class="fa fa-3x fa-building-o"><span class="fa icon_sub"> 학술정보원</span></i></div>
+		<div class="mouse_pointer icon_sub_button"><i class="fa fa-3x fa-building-o"><span class="fa icon_sub"> 광개토관</span></i></div>
+		<div class="mouse_pointer icon_sub_button"><i class="fa fa-3x fa-building-o"><span class="fa icon_sub"> 율곡관</span></i></div>
+	-->
 </body>
 <script src="../static/vendor/jquery/jquery-3.2.1.min.js"></script>
 <script src="../static/vendor/bootstrap/js/popper.js"></script>
@@ -99,7 +120,7 @@
 <script src="../static/vendor/select2/select2.min.js"></script>
 <script src="../static/js/modal.js"></script>
 <script src="../static/js/main.js"></script>
-<script src="../static/js/board.js"></script>
+<!--<script src="../static/js/board.js"></script>-->
 <script src="../static/js/function.js"></script>
 
 </html>

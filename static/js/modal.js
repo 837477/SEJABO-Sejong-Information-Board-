@@ -1,10 +1,11 @@
+/*
 var check_ = sessionStorage.getItem("count");
 if(check_ != "ok")
-    {
+   {
         $("#myModal").removeClass("modal_display_none");
         sessionStorage.setItem("count", "ok");
     }
-
+*/
 
 // Get the modal
         var modal = document.getElementById('myModal');
