@@ -21,8 +21,7 @@
 	<link rel="stylesheet" type="text/css" href="../static/css/main.css">
 	<link rel="stylesheet" type="text/css" href="../static/css/loading.css">
 	<link rel="stylesheet" href="../static/css/magic/dist/magic.css">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-		integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
 
 </head>
@@ -37,15 +36,11 @@
 		<button id="search_button" type="button" class="btn btn-secondary search_button" onclick="">검색</button>
 
 
-		<button id="login_button" type="button" class="btn btn-secondary login_button" onclick="">로그인</button>
+		<button id="login_button" type="button" class="btn btn-secondary login_button">로그인</button>
 	
 		<div class="board-title">
-				SEJABO
+			SEJABO
 		</div>
-	
-		
-
-	<button id="modal_login_btn" class="btn btn-warning" onclick="document.getElementById('id01').style.display='block'">로그인</button>
 
 	<button id="modal_login_btn" class="btn btn-warning" onclick="document.getElementById('id02').style.display='block'">검색</button>
 
@@ -56,54 +51,24 @@
 		<button id="YGG" type="button" class="btn btn-danger location_button">율곡관</button>
 	</div>
 
-	<!-- 모바일 로그인 모달 -->
-	<div id="id01" class="modal_login">
-		<!-- Modal Content -->
-		<form class="modal_login_content animate">
-			<div class="container">
-				<div class="login_test">
-					<span class="login100-form-title2" style="color: black;">
-						로그인
-					</span>
-					<br>
-					<div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
-						<input class="input100" type="text" name="email" placeholder="학번/사번 입력" autocomplete="off">
-						<span class="focus-input100"></span>
-						<span class="symbol-input100">
-							<span class="lnr lnr-envelope"></span>
-						</span>
-					</div>
-	
-					<div class="wrap-input100 validate-input" data-validate="Password is required">
-						<input class="input100" type="password" name="pass" placeholder="비밀번호 입력" autocomplete="off">
-						<span class="focus-input100"></span>
-						<span class="symbol-input100">
-							<span class="lnr lnr-lock"></span>
-						</span>
-					</div>
-	
-					<div class="container-login100-form-btn">
-						<button class="login100-form-btn">
-							확인
-						</button>
-					</div>
-				</div>
-			</div>
-		</form>
+	<!-- login Modal -->
+	<div id="login_modal" class="login_modal">
+		<!-- Modal content -->
+		<div class="login_modal_content">
+			<span class="login_modal_close">&times;</span>
+			<p>Some text in the Modal..</p>
+		</div>
 	</div>
 
-	<!-- 모바일 로그인 모달 -->
-	<div id="id02" class="modal_login">
-		<!-- Modal Content -->
-		<form class="modal_login_content animate">
-			<div class="container">
-				
-			</div>
-		</form>
+	<!-- search Modal -->
+	<div id="search_modal" class="search_modal">
+		<!-- Modal content -->
+		<div class="search_modal_content">
+			<span class="search_modal_close">&times;</span>
+			<p>검색창입니다.</p>
+		</div>
 	</div>
 
-	
-	
 	<!-- Main Modal -->
 	<div id="main_modal" class="modal">
 		<div class="modal-content">
@@ -141,7 +106,7 @@
 					</div>
 					<i id="explain_gobutton1" class="fa fa-angle-right"></i>
 					<i id="explain_gobutton2" class="fa fa-angle-left none_display"></i>
-					<button id="close_modal_btn" class="go_main_Btn">살펴보다</button>
+					<button id="main_modal_btn" class="go_main_Btn">살펴보다</button>
 				</div>
 	
 				<div class="cssload-loader-inner">

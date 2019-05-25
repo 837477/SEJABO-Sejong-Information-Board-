@@ -986,7 +986,78 @@ input[type="search"]{
   display: none;
 }
 
+/* 로그인 모달 */
+.login_modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 900; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+/* Modal Content */
+.login_modal_content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+/* The Close Button */
+.login_modal_close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.login_modal_close:hover,
+.login_modal_close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
 
+/* ======================================================== */
+/* 검색모달 */
+.search_modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 900; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+/* Modal Content */
+.search_modal_content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+/* The Close Button */
+.search_modal_close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.search_modal_close:hover,
+.search_modal_close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
 
 
 @media screen and (max-width: 1000px) {
@@ -1054,13 +1125,7 @@ input[type="search"]{
     float: left;
     margin-top: 10px;
   }
-  #modal_login_btn
-  {
-    display: inline-block;
-    position: relative;
-    margin-left: 10px;
-    margin-top: 10px;
-  }
+
   #modal_search_btn
   {
     display: inline-block;
@@ -1075,7 +1140,7 @@ input[type="search"]{
         position: absolute;
         width: 99%;
         height: 92%;
-        top: ;
+        top: 7%;
         left: 0.5%;
         box-shadow: 0px 0px 8px #888888;
         border-radius: 6px;
