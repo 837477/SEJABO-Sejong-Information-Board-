@@ -1,11 +1,9 @@
-/*
 var check_ = sessionStorage.getItem("count");
-if(check_ != "ok")
+if(check_ == "ok")
    {
-        $("#myModal").removeClass("modal_display_none");
-        sessionStorage.setItem("count", "ok");
+        $("#main_modal").addClass("modal_display_none");
     }
-*/
+else sessionStorage.setItem("count", "ok");
 
 // Get the modal
         var modal = document.getElementById('main_modal');
@@ -44,3 +42,18 @@ if(check_ != "ok")
                 //$("#myModal").removeClass("modal_display_block");
             }
         }
+
+
+        // Get the modal
+var modal = document.getElementById('id01');
+var modal2 = document.getElementById('id02');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    else if(event.target == modal2){
+        modal2.style.display = "none";
+      }
+}
