@@ -101,6 +101,7 @@ $('#DYAI').click(function()
     $(show_btn).addClass('btn-primary');
     $(show_btn).text('세종이노센터');
     location_now();
+    refleshPage();
 });
 
 $('#DCG').click(function()
@@ -109,6 +110,7 @@ $('#DCG').click(function()
     $(show_btn).addClass('btn-success');
     $(show_btn).text('학술정보원');
     location_now();
+    refleshPage();
 });
 
 $('#GGTG').click(function()
@@ -117,6 +119,7 @@ $('#GGTG').click(function()
     $(show_btn).addClass('btn-warning');
     $(show_btn).text('광개토관');
     location_now();
+    refleshPage();
 });
 
 $('#YGG').click(function()
@@ -125,4 +128,5 @@ $('#YGG').click(function()
     $(show_btn).addClass('btn-danger');
     $(show_btn).text('율곡관');
     location_now();
+    refleshPage();
 });
