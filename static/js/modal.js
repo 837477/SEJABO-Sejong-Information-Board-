@@ -36,15 +36,21 @@ var login_modal_close = document.getElementsByClassName("login_modal_close")[0];
 // When the user clicks the button, open the modal
 login_button.onclick = function() {
     login_modal.style.display = "block";
+    $('#login_modal_content').addClass("magictime");
+    $('#login_modal_content').addClass("spaceInDown");
 }
 // When the user clicks on <span> (x), close the modal
 login_modal_close.onclick = function() {
     login_modal.style.display = "none";
+    $('#login_modal_content').removeClass("magictime");
+    $('#login_modal_content').removeClass("spaceInDown");
 }
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   if (event.target == login_modal) {
     login_modal.style.display = "none";
+    $('#login_modal_content').removeClass("magictime");
+    $('#login_modal_content').removeClass("spaceInDown");
   }
 }
 
@@ -58,14 +64,20 @@ var search_modal_close = document.getElementsByClassName("search_modal_close")[0
 // When the user clicks the button, open the modal
 search_button.onclick = function() {
     search_modal.style.display = "block";
+    $('#search_modal_content').addClass("magictime");
+    $('#search_modal_content').addClass("spaceInDown");
 }
 // When the user clicks on <span> (x), close the modal
 search_modal_close.onclick = function() {
     search_modal.style.display = "none";
+    $('#search_modal_content').removeClass("magictime");
+    $('#search_modal_content').removeClass("spaceInDown");
 }
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   if (event.target == login_modal) {
     search_modal.style.display = "none";
+    $('#search_modal_content').removeClass("magictime");
+    $('#search_modal_content').removeClass("spaceInDown");
   }
 }

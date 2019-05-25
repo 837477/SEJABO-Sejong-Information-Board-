@@ -54,18 +54,48 @@
 	<!-- login Modal -->
 	<div id="login_modal" class="login_modal">
 		<!-- Modal content -->
-		<div class="login_modal_content">
+		<div id="login_modal_content" class="login_modal_content">
 			<span class="login_modal_close">&times;</span>
-			<p>Some text in the Modal..</p>
+			
+			<form class="login100-form validate-form">
+				<span class="login100-form-title p-b-55">
+					Login
+				</span>
+
+				<div class="wrap-input100 validate-input m-b-16" data-validate = "Valid email is required: ex@abc.xyz">
+					<input class="input100" type="text" name="email" placeholder="Email" autocomplete="off">
+					<span class="focus-input100"></span>
+					<span class="symbol-input100">
+						<span class="lnr lnr-envelope"></span>
+					</span>
+				</div>
+
+				<div class="wrap-input100 validate-input m-b-16" data-validate = "Password is required">
+					<input class="input100" type="password" name="pass" placeholder="Password" autocomplete="off">
+					<span class="focus-input100"></span>
+					<span class="symbol-input100">
+						<span class="lnr lnr-lock"></span>
+					</span>
+				</div>
+				
+				<div class="container-login100-form-btn p-t-25">
+					<button class="login100-form-btn">
+						Login
+					</button>
+				</div>
+
+			</form>
+
 		</div>
 	</div>
 
 	<!-- search Modal -->
 	<div id="search_modal" class="search_modal">
 		<!-- Modal content -->
-		<div class="search_modal_content">
+		<div id="search_modal_content" class="search_modal_content">
 			<span class="search_modal_close">&times;</span>
-			<p>검색창입니다.</p>
+			<i class="fas fa-search"></i>
+			<input type="text" class="search_modal_textbox" placeholder="입력 후 엔터를 쳐주세요.">
 		</div>
 	</div>
 
