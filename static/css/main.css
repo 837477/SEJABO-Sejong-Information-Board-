@@ -1030,6 +1030,7 @@ border: none;
   color: #333333;
   margin-right: 10px;
   font-weight: bold;
+  margin-left: 180px;
 }
 .post_data_start {
   float: left;
@@ -1045,20 +1046,6 @@ border: none;
 }
 .post_data_end {
   float: left;
-  font-size: 25px;
-  color: #333333;
-  margin-right: 10px;
-}
-.post_where_title {
-  float: right;
-  font-size: 25px;
-  color: #333333;
-  margin-left: 10px;
-  margin-right: 10px;
-  font-weight: bold;
-}
-.post_where {
-  float: right;
   font-size: 25px;
   color: #333333;
   margin-right: 10px;
