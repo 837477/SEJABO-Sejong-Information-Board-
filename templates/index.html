@@ -90,7 +90,6 @@
 
 		</div>
 	</div>
-
 	<!-- search Modal -->
 	<div id="search_modal" class="search_modal">
 		<!-- Modal content -->
@@ -98,6 +97,43 @@
 			<span class="search_modal_close">&times;</span>
 			<i class="fas fa-search"></i>
 			<input type="text" class="search_modal_textbox" placeholder="입력 후 엔터를 쳐주세요.">
+		</div>
+	</div>
+
+	<!-- post Modal -->
+	<div id="post_modal" class="post_modal">
+		<!-- Modal content -->
+		<div id="post_modal_content" class="post_modal_content">
+			<button type="button" class="btn btn-secondary share_button">
+				<i class="fas fa-clone"></i> 보내기</button>
+			<div class="post_top">
+				<div class="post_data_start_title">게시 기간 :</div>
+				<div class="post_data_start">2019-05-13</div>
+				<div class="post_data_between">~</div>
+				<div class="post_data_end">2019-05-20</div>
+				<div class="post_where">세종이노센터</div>
+				<div class="post_where_title">위치 :</div>
+			</div>
+			<span class="post_modal_close">&times;</span>
+			<div class="post_content_img">
+				<div class="post_content_img_content"></div>
+			</div>
+			<div class="post_content_text">
+				<div class="profile_img">
+					<!--지우셈-->
+					<img id="idenfication_test" src="" alt="Avatar">
+				</div>
+				<div class="profile_title">테스트 포스트 제목입니다.</div>
+				<div class="profile_hr"></div>
+				<div class="post_content_content">테스트 포스트 글입니다. 하하하하하하하하 내이름은 코난 탐정이죠. 이건 무엇일까나테스트 포스트 글입니다. 하하하하하하하하 내이름은
+					코난 탐정이죠. 이건 무엇일까나테스트 포스트 글입니다. 하하하하하하하하 내이름은 코난 탐정이죠. 이건 무엇일까나테스트 포스트 글입니다. 하하하하하하하하 내이름은 코난 탐정이죠. 이건
+					무엇일까나테스트 포스트 글입니다. 하하하하하하하하 내이름은 코난 탐정이죠. 이건 무엇일까나테스트 포스트 글입니다. 하하하하하하하하 내이름은 코난 탐정이죠. 이건 무엇일까나테스트 포스트
+					글입니다. 하하하하하하하하 내이름은 코난 탐정이죠. 이건 무엇일까나테스트 포스트 글입니다. 하하하하하하하하 내이름은 코난 탐정이죠. 이건 무엇일까나</div>
+				<div class="profile_hr"></div>
+				<div class="post_content_url"><i class="fas fa-external-link-alt"></i> 외부링크 바로가기</div>
+				<div class="post_content_good"><i class="fas fa-thumbs-up"></i></div>
+				<div class="post_content_bad"><i class="fas fa-thumbs-down"></i></div>
+			</div>
 		</div>
 	</div>
 
@@ -162,9 +198,11 @@
 			</div>
 		</div>
 	</div>
-	
+
+
 	<div id="board1" class="board1"></div>
-	
+
+	<div id="post_button" style="position: absolute; width: 100px; height: 100px; left: 50%; top: 50%; z-index: 300;background-color: black; cursor: pointer;"></div>
 	
 
 </body>
@@ -178,5 +216,8 @@
 <script src="../static/js/board.js"></script>
 <script src="../static/js/function.js"></script>
 <script src="../static/js/snackbar.js"></script>
+<script src="../static/js/pnglib.js"></script>
+<script src="../static/js/identicon.js"></script>
+<script src="../static/js/idenfication.js"></script>
 
 </html>

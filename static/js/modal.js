@@ -81,3 +81,32 @@ window.onclick = function(event) {
     $('#search_modal_content').removeClass("spaceInDown");
   }
 }
+
+
+//======================================================================//
+//포스트 모달 부분.
+
+var post_modal = document.getElementById("post_modal");
+var post_button = document.getElementById("post_button");
+var post_modal_close = document.getElementsByClassName("post_modal_close")[0];
+
+// When the user clicks the button, open the modal
+post_button.onclick = function() {
+    post_modal.style.display = "block";
+    $('#post_modal_content').addClass("magictime");
+    $('#post_modal_content').addClass("spaceInDown");
+}
+// When the user clicks on <span> (x), close the modal
+post_modal_close.onclick = function() {
+    post_modal.style.display = "none";
+    $('#post_modal_content').removeClass("magictime");
+    $('#post_modal_content').removeClass("spaceInDown");
+}
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == login_modal) {
+    post_modal.style.display = "none";
+    $('#post_modal_content').removeClass("magictime");
+    $('#post_modal_content').removeClass("spaceInDown");
+  }
+}
