@@ -150,7 +150,7 @@
   {
     border-bottom-width: 2px !important;
   }
-  /* ======================================================== */
+   /* ======================================================== */
   /* 포스트모달 */
   .post_modal {
     display: none; /* Hidden by default */
@@ -173,8 +173,8 @@
     transform: translate(-50%, -50%);
     background-color: #fefefe;
     border: 1px solid #888;
-    max-width: 1400px;
-    height: 800px;
+    max-width: 1300px;
+    height: 900px;
   }
   /* The Close Button */
   .post_modal_close {
@@ -204,8 +204,8 @@
     left: 50%;
     transform: translate(-50%, 0);
     margin: 20px;
-    padding: 10px 15px;
-    background-color: rgba(200,200,200,0.5);
+    padding: 12px 15px;
+    background-color: rgba(220,220,220,0.5);
     border-radius: 8px;
     cursor: default;
   }
@@ -247,9 +247,8 @@
   .post_content_img_content {
     width: 100%;
     height: 100%;
-    background-color: rgba(200,200,200,0.5);
+    background-color: rgba(220,220,220,0);
     border-radius: 6px;
-    cursor: pointer;
   }
   .post_content_text {
     position: absolute;
@@ -265,8 +264,29 @@
     width: 80px;
     height: 80px;
     border-radius: 8px;
-    background-color: rgba(200,200,200,0.5);
+    background-color: rgba(220,220,220,0.5);
     cursor: pointer;
+    transition: 0.6s;
+  }
+  .profile_img:hover {
+    transform: scale(1.06, 1.06);
+    box-shadow: 0 0 8px #888888;
+  }
+  .post_content_img_image {
+    height: 85%;
+    width: auto;
+    background-size: cover;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 8px;
+    box-shadow: 0 0 8px #666666;
+    cursor: pointer;
+    transition: 0.6s ease;
+  }
+  .post_content_img_image:hover {
+    transform: translate(-50%, -50%) scale(1.06, 1.06);
   }
   
   /*idenfication 테스트용*/
@@ -278,27 +298,28 @@
   
   .profile_title {
     float: right; 
-    width: 550px;
+    width: 500px;
     height: 80px;
     font-size: 40px;
     color: #333333;
-    background-color: rgba(200,200,200,0.5);
+    background-color: rgba(220,220,220,0.5);
     border-radius: 8px;
-    padding: 10px;
-    padding-top: 15px;
+    padding: 15px 15px 10px 15px;
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
   .profile_hr {
-    margin-top: 20px;
+    margin-top: 30px;
     float: left;
     width: 100%;
-    border-top: 4px solid rgba(200,200,200, 0.3);
-    margin-bottom: 20px;
+    border-top: 4px solid rgba(220,220,220, 0.3);
+    margin-bottom: 30px;
   }
   .post_content_content {
     float: left;
     width: 100%;
-    height: 350px;
-    background-color: rgba(200,200,200,0.5);
+    height: 380px;
+    background-color: rgba(220,220,220,0.5);
     border-radius: 8px;
     padding: 10px;
     font-size: 20px;
@@ -314,7 +335,7 @@
     border-radius: 8px;
     color: #333333;
     font-size: 25px;
-    background-color: rgba(200,200,200, 0.5);
+    background-color: rgba(220,220,220, 0.5);
     padding: 10px;
     text-align: center;
     box-shadow: 0 0 8px #777777;
@@ -323,11 +344,11 @@
   }
   .post_content_url:hover {
     box-shadow: 0 0 8px #fefefe;
-    background-color: rgba(100, 100, 100, 0.7);
+    background-color: rgba(120, 120, 120, 0.7);
   }
   .post_content_good {
     float: left;
-    width: 310px;
+    width: 290px;
     height: 60px;
     border-radius: 8px;
     color: white;
@@ -345,7 +366,7 @@
   }
   .post_content_bad {
     float: right;
-    width: 310px;
+    width: 290px;
     height: 60px;
     margin-left: 20px;
     border-radius: 8px;
@@ -373,4 +394,100 @@
     padding: 10px;
     text-align: center;
   }
+  
+  /* ======================================================== */
+  /* 포스트 관리 모달 */
+  .post_admin_modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 900; /* Sit on top */
+    padding-top: 150px; /* Location of the box */
+    left: 0;
+    top: 0;
+    border-radius: 6px;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  /* Modal Content */
+  .post_admin_modal_content {
+    background-color: #fefefe;
+    margin: auto;
+    border: 1px solid #888;
+    width: 40%;
+    height: 700px;
+    padding: 10px 15px;
+    border-radius: 6px;
+  }
+  /* The Close Button */
+  .post_admin_modal_close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 40px;
+    font-weight: bold;
+  }
+  .post_admin_modal_close:hover,
+  .post_admin_modal_close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .post_admin_top {
+    height: 40px;
+    float: left;
+    margin: 10px 0px;
+  }
+  .post_admin_prev_button {
+    display: block;
+    position: absolute;
+    bottom: 15px;
+    right: 90px;
+    width: 60px;
+    height: auto;
+  }
+  .post_admin_next_button {
+    display: block;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    width: 60px;
+    height: auto;
+  }
+  .post_select_box_group
+  {
+    position: relative;
+    width: 295px;
+    margin: auto;
+  }
+  .post_select_box
+  {
+    margin: 0px 5px;
+    width: 60px;
+  }
+  .post_select_img_box
+  {
+      width: 400px;
+      height: 500px;
+      margin: auto;
+  }
+  .post_select_box_img
+  {
+    display: block;
+    width:340px;
+    height: 440px;
+    margin: auto;
+  }
+  /*
+  S: 160 * 220
+  M: 200 * 280
+  L: 280 * 360
+  XL: 340 * 440
+  */
+  .post_admin_display_none
+  {
+      display: none;
+  }
+
   

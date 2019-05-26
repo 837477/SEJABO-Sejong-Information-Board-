@@ -17,7 +17,6 @@
 		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 	<!--아이콘-->
-
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
 		integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="../static/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
@@ -61,12 +60,12 @@
 		<!-- Modal content -->
 		<div id="login_modal_content" class="login_modal_content">
 			<span class="login_modal_close">&times;</span>
-
+	
 			<form class="login100-form validate-form">
 				<span class="login100-form-title p-b-55">
 					Login
 				</span>
-
+	
 				<div class="wrap-input100 validate-input m-b-16" data-validate="Valid email is required: ex@abc.xyz">
 					<input class="input100" type="text" name="email" placeholder="Email" autocomplete="off">
 					<span class="focus-input100"></span>
@@ -74,7 +73,7 @@
 						<span class="lnr lnr-envelope"></span>
 					</span>
 				</div>
-
+	
 				<div class="wrap-input100 validate-input m-b-16" data-validate="Password is required">
 					<input class="input100" type="password" name="pass" placeholder="Password" autocomplete="off">
 					<span class="focus-input100"></span>
@@ -82,18 +81,18 @@
 						<span class="lnr lnr-lock"></span>
 					</span>
 				</div>
-
+	
 				<div class="container-login100-form-btn p-t-25">
 					<button class="login100-form-btn">
 						Login
 					</button>
 				</div>
-
+	
 			</form>
-
+	
 		</div>
 	</div>
-
+	
 	<!--검색 모달-->
 	<div id="search_modal" class="search_modal">
 		<!-- Modal content -->
@@ -103,24 +102,28 @@
 			<input type="text" class="search_modal_textbox" placeholder="입력 후 엔터를 쳐주세요.">
 		</div>
 	</div>
-
+	
 	<!--포스트 모달-->
 	<div id="post_modal" class="post_modal">
 		<!-- Modal content -->
 		<div id="post_modal_content" class="post_modal_content">
-			<button type="button" class="btn btn-secondary share_button">
+			<button id="share_button" type="button" class="btn btn-secondary share_button">
 				<i class="fas fa-clone"></i> 보내기</button>
-			<div class="post_top">
-				<div class="post_data_start_title">게시 기간 :</div>
+			<div id="post_top" class="post_top">
+				<div id="post_data_start_title" class="post_data_start_title">게시 기간 :</div>
 				<div id="post_data_start" class="post_data_start"></div>
 				<div class="post_data_between">~</div>
 				<div id="post_data_end" class="post_data_end"></div>
 			</div>
 			<span class="post_modal_close">&times;</span>
-			<div class="post_content_img">
-				<div id="post_content_img_content" class="post_content_img_content"></div>
+			<!--이미지영역-->
+			<div id="post_content_img" class="post_content_img">
+				<div id="post_content_img_content" class="post_content_img_content">
+					<img id="post_content_img_image" class="post_content_img_image">
+				</div>
 			</div>
-			<div class="post_content_text">
+			<!--내용영역-->
+			<div id="post_content_text" class="post_content_text">
 				<div class="profile_img">
 					<!--지우셈-->
 					<img id="idenfication_test" src="" alt="Avatar">
@@ -129,10 +132,10 @@
 				<div class="profile_hr"></div>
 				<div id="post_content_content" class="post_content_content"></div>
 				<div class="profile_hr"></div>
-				<a id="post_content_url" class="post_content_url" target="_blank"><i
-						class="fas fa-external-link-alt"></i> 외부링크 바로가기</a>
-				<div class="post_content_good"><i class="fas fa-thumbs-up"></i></div>
-				<div class="post_content_bad"><i class="fas fa-thumbs-down"></i></div>
+				<a id="post_content_url" class="post_content_url" target="_blank"><i class="fas fa-external-link-alt"></i>
+					외부링크 바로가기</a>
+				<div id="post_content_good" class="post_content_good"><i class="fas fa-thumbs-up"></i></div>
+				<div id="post_content_bad" class="post_content_bad"><i class="fas fa-thumbs-down"></i></div>
 			</div>
 		</div>
 	</div>
@@ -141,12 +144,78 @@
 	<div id="post_admin_modal" class="post_admin_modal">
 		<!-- Modal content -->
 		<div id="post_admin_modal_content" class="post_admin_modal_content">
-			<span class="post_admin_modal_close">&times;</span>
+
+			<div id="post_creat" class="form-group post_admin_display_none">
+				<div class="form-group">
+					<div class="post_admin_top">
+						<h2 style="font-weight: bold;">게시글 작성</h2>
+					</div>
+					<span class="post_admin_modal_close">&times;</span>
+				</div>
+				<br>
+				<br>
+				<hr>
+				<div class="form-group">
+					<input class="form-control form-control-lg" type="text" placeholder="제목">
+				</div>
+		
+				<div class="form-group">
+					<labelfor="exampleFormControlTextarea1">내 용</label>
+						<textarea class="form-control" id="exampleFormControlTextarea1" style="resize: none;" rows="14"></textarea>
+				</div>
+				<div class="form-group">
+					<div class="form-group">
+						<label for="exampleFormControlFile1">첨 부 파 일</label>
+						<input type="file" class="form-control-file" id="exampleFormControlFile1">
+					</div>
+				</div>
+			</div>
+			
+			<div id="post_select_box" class="form-group post_admin_display_none">
+				<div class="form-group">
+					<div class="post_admin_top">
+						<h2 style="font-weight: bold;">블록 크기</h2>
+					</div>
+					<span class="post_admin_modal_close">&times;</span>
+				</div>
+				<br>
+				<br>
+				<hr>
+				<div class="form-group post_select_box_group">
+					<button id="post_select_box_XL" type="button" class="btn btn-info post_select_box" onclick="">XL</button>
+					<button id="post_select_box_L" type="button" class="btn btn-info post_select_box" onclick="">L</button>
+					<button id="post_select_box_M" type="button" class="btn btn-info post_select_box" onclick="">M</button>
+					<button id="post_select_box_S" type="button" class="btn btn-info post_select_box" onclick="">S</button>
+				</div>
+				<br>
+				<div class="form-group post_select_img_box">
+					<img class="post_select_box_img" src="../static/img/SejaboLOGO.png" alt="sejabo">
+				</div>
+			</div>
+
+			<div id="post_select_date" class="form-group">
+				<div class="form-group">
+					<div class="post_admin_top">
+						<h2 style="font-weight: bold;">게시 기간 설정</h2>
+					</div>
+					<span class="post_admin_modal_close">&times;</span>
+				</div>
+				<br>
+				<br>
+				<hr>
+				<div class="form-group">
+
+				</div>
+			</div>
+
+			<button id="post_admin_prev_button" type="button" class="btn btn-secondary post_admin_prev_button post_admin_display_none" onclick="">이전</button>
+
+			<button id="post_admin_next_button" type="button" class="btn btn-success post_admin_next_button" onclick="">다음</button>
+			
 		</div>
 	</div>
 
 	<!--세자보 메인 모달-->
-	<!-- Main Modal -->
 	<div id="main_modal" class="modal">
 		<div id="main_modal_box" class="main_modal-box">
 			<span class="close"></span>
@@ -185,7 +254,7 @@
 					<i id="explain_gobutton2" class="fa fa-angle-left none_display"></i>
 					<button id="main_modal_btn" class="go_main_Btn">살펴보다</button>
 				</div>
-
+	
 				<div class="cssload-loader-inner">
 					<div class="cssload-cssload-loader-line-wrap-wrap">
 						<div class="cssload-loader-line-wrap"></div>
@@ -203,7 +272,7 @@
 						<div class="cssload-loader-line-wrap"></div>
 					</div>
 				</div>
-
+	
 			</div>
 		</div>
 	</div>

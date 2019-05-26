@@ -1,13 +1,12 @@
 //=================================================================//
 //메인 모달 세션토큰 관리.
-/*
 var check_ = sessionStorage.getItem("count");
 if(check_ == "ok")
    {
         $("#main_modal").addClass("modal_display_none");
     }
 else sessionStorage.setItem("count", "ok");
-*/
+
 //======================================================================//
 //메인 모달 부분
 var main_modal = document.getElementById('main_modal');
@@ -154,6 +153,8 @@ window.onclick = function (event) {
 }
 //=============================================================//
 //게시글 관리 
+var post_admin_cnt = 0;
+
 var post_admin_modal = document.getElementById("post_admin_modal");
 var post_admin_modal_button = document.getElementById("post_admin_modal_button");
 var post_admin_modal_close = document.getElementsByClassName("post_admin_modal_close")[0];
@@ -163,6 +164,16 @@ post_admin_modal_button.onclick = function () {
   post_admin_modal.style.display = "block";
   $('#post_admin_modal_content').addClass("magictime");
   $('#post_admin_modal_content').addClass("spaceInDown");
+
+  /*
+  if(post_admin_cnt == 0) //post_creat(첫 페이지)
+  {
+    $('#post_creat').removeClass("post_admin_display_none");
+    $('post_select_box').addClass("post_admin_display_none");
+  }
+  */
+
+  /*게시글 관리 모달쪽 이어서 해야하는 부분: 게시글 게시 기한 부터 시작해서 ! 끝까지 배치 완료하고 -> js로 첫 페이지일때 이전버튼 디스플레이 논 시키고, cnt에 따라 다음을 누르면 4페이지 중 해당 페이지로 이동 시켜야함.*/
 }
 // When the user clicks on <span> (x), close the modal
 post_admin_modal_close.onclick = function () {
