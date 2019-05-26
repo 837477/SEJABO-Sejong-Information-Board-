@@ -1,112 +1,180 @@
+//=================================================================//
+//메인 모달 세션토큰 관리.
+/*
 var check_ = sessionStorage.getItem("count");
 if(check_ == "ok")
    {
         $("#main_modal").addClass("modal_display_none");
     }
 else sessionStorage.setItem("count", "ok");
+*/
 //======================================================================//
 //메인 모달 부분
-
 var main_modal = document.getElementById('main_modal');
 var main_modal_btn = document.getElementById("main_modal_btn");
 main_modal_btn.onclick = function () {
-    $('#main_modal_content').addClass("magictime");
-    $("#main_modal_content").addClass("tinUpOut");
+  $('#main_modal_content').addClass("magictime");
+  $("#main_modal_content").addClass("tinUpOut");
+  setTimeout(function () {
+    $('#main_modal_content').addClass("modal_display_none");
+    $("#main_modal_content").removeClass("tinUpOut");
+  }, 1100);
+  setTimeout(function () {
+    $('#main_modal').addClass("magictime");
+    $("#main_modal").addClass("swashOut");
     setTimeout(function () {
-        $('#main_modal_content').addClass("modal_display_none");
-        $("#main_modal_content").removeClass("tinUpOut");
+      $('#main_modal').addClass("modal_display_none");
+      $("#main_modal").removeClass("swashOut");
     }, 1100);
-    setTimeout(function () {
-        $('#main_modal').addClass("magictime");
-        $("#main_modal").addClass("swashOut");
-        setTimeout(function () {
-            $('#main_modal').addClass("modal_display_none");
-            $("#main_modal").removeClass("swashOut");
-        }, 1100);
-    }, 3100);
+  }, 3100);
 }
 
+$('#explain_gobutton1').click(function () { //디스플레이 논을 버튼 2에서 버튼1꺼를 논시키는 형식으로 가야함.
+  $('#information1').addClass("magictime");
+  $('#information1').addClass("rotateLeft");
+  $('#explain_gobutton1').removeClass("show_display");
+  $('#explain_gobutton1').addClass("none_display");
+  setTimeout(function () {
+    //information2 보이게 실시!
+    $('#information2').addClass("show_display");
+    $('#information2').removeClass("none_display");
+    $('#explain_gobutton2').addClass("show_display");
+    $('#explain_gobutton2').removeClass("none_display");
+
+    //위에서 실행된 에니메이션 다시 제거.
+    $('#information1').removeClass("magictime");
+    $('#information1').removeClass("rotateLeft");
+
+    //그리고 information 디스플레이 논 처리.
+    $('#information1').removeClass("show_display");
+    $('#information1').addClass("none_display");
+  }, 600);
+});
+
+$('#explain_gobutton2').click(function () {
+  $('#information2').addClass("magictime");
+  $('#information2').addClass("rotateRight");
+  $('#explain_gobutton2').removeClass("show_display");
+  $('#explain_gobutton2').addClass("none_display");
+  setTimeout(function () {
+    //information1 보이게 실시!
+    $('#information1').addClass("show_display");
+    $('#information1').removeClass("none_display");
+    $('#explain_gobutton1').addClass("show_display");
+    $('#explain_gobutton1').removeClass("none_display");
+
+    //위에서 실행된 에니메이션 다시 제거.
+    $('#information2').removeClass("magictime");
+    $('#information2').removeClass("rotateRight");
+
+    //그리고 information 디스플레이 논 처리.
+    $('#information2').removeClass("show_display");
+    $('#information2').addClass("none_display");
+  }, 600);
+});
 //=====================================================================//
 //로그인모달 부분
-
 var login_modal = document.getElementById("login_modal");
 var login_button = document.getElementById("login_button");
 var login_modal_close = document.getElementsByClassName("login_modal_close")[0];
 
 // When the user clicks the button, open the modal
-login_button.onclick = function() {
-    login_modal.style.display = "block";
-    $('#login_modal_content').addClass("magictime");
-    $('#login_modal_content').addClass("spaceInDown");
+login_button.onclick = function () {
+  login_modal.style.display = "block";
+  $('#login_modal_content').addClass("magictime");
+  $('#login_modal_content').addClass("spaceInDown");
 }
 // When the user clicks on <span> (x), close the modal
-login_modal_close.onclick = function() {
-    login_modal.style.display = "none";
-    $('#login_modal_content').removeClass("magictime");
-    $('#login_modal_content').removeClass("spaceInDown");
+login_modal_close.onclick = function () {
+  login_modal.style.display = "none";
+  $('#login_modal_content').removeClass("magictime");
+  $('#login_modal_content').removeClass("spaceInDown");
 }
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
+window.onclick = function (event) {
   if (event.target == login_modal) {
     login_modal.style.display = "none";
     $('#login_modal_content').removeClass("magictime");
     $('#login_modal_content').removeClass("spaceInDown");
   }
 }
-
 //======================================================================//
 //검색 모달 부분.
-
 var search_modal = document.getElementById("search_modal");
 var search_button = document.getElementById("search_button");
 var search_modal_close = document.getElementsByClassName("search_modal_close")[0];
 
 // When the user clicks the button, open the modal
-search_button.onclick = function() {
-    search_modal.style.display = "block";
-    $('#search_modal_content').addClass("magictime");
-    $('#search_modal_content').addClass("spaceInDown");
+search_button.onclick = function () {
+  search_modal.style.display = "block";
+  $('#search_modal_content').addClass("magictime");
+  $('#search_modal_content').addClass("spaceInDown");
 }
 // When the user clicks on <span> (x), close the modal
-search_modal_close.onclick = function() {
-    search_modal.style.display = "none";
-    $('#search_modal_content').removeClass("magictime");
-    $('#search_modal_content').removeClass("spaceInDown");
+search_modal_close.onclick = function () {
+  search_modal.style.display = "none";
+  $('#search_modal_content').removeClass("magictime");
+  $('#search_modal_content').removeClass("spaceInDown");
 }
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
+window.onclick = function (event) {
   if (event.target == login_modal) {
     search_modal.style.display = "none";
     $('#search_modal_content').removeClass("magictime");
     $('#search_modal_content').removeClass("spaceInDown");
   }
 }
-
-
 //======================================================================//
 //포스트 모달 부분.
-
 var post_modal = document.getElementById("post_modal");
-var post_button = document.getElementById("post_button");
 var post_modal_close = document.getElementsByClassName("post_modal_close")[0];
 
 // When the user clicks the button, open the modal
-post_button.onclick = function() {
-    post_modal.style.display = "block";
-    $('#post_modal_content').addClass("magictime");
-    $('#post_modal_content').addClass("spaceInDown");
+function post_button_click(post_id) {
+  post_modal.style.display = "block";
+  $('#post_modal_content').addClass("magictime");
+  $('#post_modal_content').addClass("spaceInDown");
+  get_post_content(post_id, post_modal);
 }
 // When the user clicks on <span> (x), close the modal
-post_modal_close.onclick = function() {
-    post_modal.style.display = "none";
-    $('#post_modal_content').removeClass("magictime");
-    $('#post_modal_content').removeClass("spaceInDown");
+post_modal_close.onclick = function () {
+  post_modal.style.display = "none";
+  $('#post_modal_content').removeClass("magictime");
+  $('#post_modal_content').removeClass("spaceInDown");
+  remove_post_content();
 }
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
+window.onclick = function (event) {
   if (event.target == login_modal) {
     post_modal.style.display = "none";
     $('#post_modal_content').removeClass("magictime");
     $('#post_modal_content').removeClass("spaceInDown");
+    remove_post_content();
+  }
+}
+//=============================================================//
+//게시글 관리 
+var post_admin_modal = document.getElementById("post_admin_modal");
+var post_admin_modal_button = document.getElementById("post_admin_modal_button");
+var post_admin_modal_close = document.getElementsByClassName("post_admin_modal_close")[0];
+
+// When the user clicks the button, open the modal
+post_admin_modal_button.onclick = function () {
+  post_admin_modal.style.display = "block";
+  $('#post_admin_modal_content').addClass("magictime");
+  $('#post_admin_modal_content').addClass("spaceInDown");
+}
+// When the user clicks on <span> (x), close the modal
+post_admin_modal_close.onclick = function () {
+  post_admin_modal.style.display = "none";
+  $('#post_admin_modal_content').removeClass("magictime");
+  $('#post_admin_modal_content').removeClass("spaceInDown");
+}
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+  if (event.target == post_admin_modal) {
+    post_admin_modal.style.display = "none";
+    $('#post_admin_modal_content').removeClass("magictime");
+    $('#post_admin_modal_content').removeClass("spaceInDown");
   }
 }
