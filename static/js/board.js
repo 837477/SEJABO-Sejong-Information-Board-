@@ -19,16 +19,16 @@ function addElement () {
    {'post_id': '6','reg_date':'2019-04-06', 'exp_date':'2019-04-18','title':'세자보 테스트 데이터 입니다.','content':'WebProgramming and Database Project','url':'https://www.naver.com','img_url':'0','view_count':'0','like_count':'0','dislike_count':'0','size':'1', 'color': '#FBEFEF'},
    {'post_id': '7','reg_date':'2019-04-05', 'exp_date':'2019-04-19','title':'Pray for SEJABO Successful','content':'WebProgramming and Database Project','url':'https://www.naver.com','img_url':'https://do.sejong.ac.kr/attachment/view/2007/clipboard.png','view_count':'0','like_count':'0','dislike_count':'0','size':'4', 'color': '#ECE0F8'},
    {'post_id': '8','reg_date':'2019-04-04', 'exp_date':'2019-04-10','title':'세자보 테스트 데이터 입니다.','content':'WebProgramming and Database Project','url':'https://www.naver.com','img_url':'0','view_count':'0','like_count':'0','dislike_count':'0','size':'2', 'color': '#ECE0F8'},
-   {'post_id': '9','reg_date':'2019-04-03', 'exp_date':'2019-04-11','title':'Pray for SEJABO Successful','content':'WebProgramming and Database Project','url':'https://www.naver.com','img_url':'https://do.sejong.ac.kr/attachment/view/940/clipboard.png','view_count':'0','like_count':'0','dislike_count':'0','size':'4', 'color': '#E0F8E6'},
-   {'post_id': '10','reg_date':'2019-04-02', 'exp_date':'2019-04-12','title':'세자보 테스트 데이터 입니다.','content':'WebProgramming and Database Project','url':'https://www.naver.com','img_url':'0','view_count':'0','like_count':'0','dislike_count':'0','size':'2', 'color': '#E0F8E6'},
-   {'post_id': '11','reg_date':'2019-04-01', 'exp_date':'2019-04-23','title':'Pray for SEJABO Successful','content':'WebProgramming and Database Project','url':'https://www.naver.com','img_url':'0','view_count':'0','like_count':'0','dislike_count':'0','size':'2', 'color': '#E0F8EC'}, 
-   {'post_id': '12','reg_date':'2019-03-11', 'exp_date':'2019-04-24','title':'Pray for SEJABO Successful','content':'WebProgramming and Database Project','url':'https://www.naver.com','img_url':'0','view_count':'0','like_count':'0','dislike_count':'0','size':'1', 'color': '#E0F8EC'}, 
-   {'post_id': '13','reg_date':'2019-03-17', 'exp_date':'2019-04-25','title':'세자보 테스트 데이터 입니다.','content':'WebProgramming and Database Project','url':'https://www.naver.com','img_url':'0','view_count':'0','like_count':'0','dislike_count':'0','size':'1', 'color': '#E0F8EC'}, 
-   {'post_id': '14','reg_date':'2019-03-16', 'exp_date':'2019-04-26','title':'세자보 테스트 데이터 입니다. 세종대 대자보 만만세 우리나라 만만세 만세이에이에이','url':'0','content':'WebProgramming and Database Project','img_url':'0','view_count':'0','like_count':'0','dislike_count':'0','size':'2', 'color': '#E0F8EC'}, 
-   {'post_id': '15','reg_date':'2019-03-15', 'exp_date':'2019-04-27','title':'세자보 테스트 데이터 입니다. 세종대 대자보 만만세 우리나라 만만세 만세이에이에이','url':'0','content':'WebProgramming and Database Project','img_url':'0','view_count':'0','like_count':'0','dislike_count':'0','size':'2', 'color': '#E0F8EC'}, 
-   {'post_id': '16','reg_date':'2019-03-14', 'exp_date':'2019-04-29','title':'세자보 테스트 데이터 입니다. 세종대 대자보 만만세 우리나라 만만세 만세이에이에이','url':'0','content':'WebProgramming and Database Project','img_url':'0','view_count':'0','like_count':'0','dislike_count':'0','size':'2', 'color': '#E0F8EC'}, 
-   {'post_id': '17','reg_date':'2019-03-12', 'exp_date':'2019-04-30','title':'세자보 테스트 데이터 입니다. 세종대 대자보 만만세 우리나라 만만세 만세이에이에이','url':'0','content':'WebProgramming and Database Project','img_url':'0','view_count':'0','like_count':'0','dislike_count':'0','size':'2', 'color': '#E0F8EC'}, 
-   {'post_id': '18','reg_date':'2019-03-13', 'exp_date':'2019-04-01','title':'세자보 테스트 데이터 입니다. 세종대 대자보 만만세 우리나라 만만세 만세이에이에이','url':'0','content':'WebProgramming and Database Project','img_url':'0','view_count':'0','like_count':'0','dislike_count':'0','size':'2', 'color': '#E0F8EC'}
+   {'post_id': '9','reg_date':'2019-04-03', 'exp_date':'2019-04-11','title':'Pray for SEJABO Successful','content':'WebProgramming and Database Project','url':'0','img_url':'https://do.sejong.ac.kr/attachment/view/940/clipboard.png','view_count':'0','like_count':'0','dislike_count':'0','size':'4', 'color': '#E0F8E6'},
+   {'post_id': '10','reg_date':'2019-04-02', 'exp_date':'2019-04-12','title':'세자보 테스트 데이터 입니다.세자보 테스트 데이터 입니다.세자보 테스트 데이터 입니다.','content':'WebProgramming and Database Project','url':'https://www.naver.com','img_url':'0','view_count':'0','like_count':'0','dislike_count':'0','size':'4', 'color': '#E0F8E6'},
+   {'post_id': '11','reg_date':'2019-04-01', 'exp_date':'2019-04-23','title':'세자보 테스트 데이터 입니다.세자보 테스트 데이터 입니다.세자보 테스트 데이터 입니다.','content':'WebProgramming and Database Project','url':'https://www.naver.com','img_url':'0','view_count':'0','like_count':'0','dislike_count':'0','size':'3', 'color': '#E0F8EC'}, 
+   {'post_id': '12','reg_date':'2019-03-11', 'exp_date':'2019-04-24','title':'세자보 테스트 데이터 입니다.세자보 테스트 데이터 입니다.세자보 테스트 데이터 입니다.','content':'WebProgramming and Database Project','url':'https://www.naver.com','img_url':'0','view_count':'0','like_count':'0','dislike_count':'0','size':'2', 'color': '#E0F8EC'}, 
+   {'post_id': '13','reg_date':'2019-03-17', 'exp_date':'2019-04-25','title':'세자보 테스트 데이터 입니다.세자보 테스트 데이터 입니다.세자보 테스트 데이터 입니다.','content':'WebProgramming and Database Project','url':'https://www.naver.com','img_url':'0','view_count':'0','like_count':'0','dislike_count':'0','size':'1', 'color': '#E0F8EC'}, 
+   {'post_id': '14','reg_date':'2019-03-16', 'exp_date':'2019-04-26','title':'세자보 테스트 데이터 입니다. 세종대 대자보 만만세 우리나라 만만세 만세이에이에이','url':'0','content':'WebProgramming and Database Project','img_url':'0','view_count':'0','like_count':'0','dislike_count':'0','size':'1', 'color': '#E0F8EC'}, 
+   {'post_id': '15','reg_date':'2019-03-15', 'exp_date':'2019-04-27','title':'세자보 테스트 데이터 입니다. 세종대 대자보 만만세 우리나라 만만세 만세이에이에이','url':'0','content':'WebProgramming and Database Project','img_url':'0','view_count':'0','like_count':'0','dislike_count':'0','size':'1', 'color': '#E0F8EC'}, 
+   {'post_id': '16','reg_date':'2019-03-14', 'exp_date':'2019-04-29','title':'세자보 테스트 데이터 입니다. 세종대 대자보 만만세 우리나라 만만세 만세이에이에이','url':'0','content':'WebProgramming and Database Project','img_url':'0','view_count':'0','like_count':'0','dislike_count':'0','size':'1', 'color': '#E0F8EC'}, 
+   {'post_id': '17','reg_date':'2019-03-12', 'exp_date':'2019-04-30','title':'세자보 테스트 데이터 입니다. 세종대 대자보 만만세 우리나라 만만세 만세이에이에이','url':'0','content':'WebProgramming and Database Project','img_url':'0','view_count':'0','like_count':'0','dislike_count':'0','size':'1', 'color': '#E0F8EC'}, 
+   {'post_id': '18','reg_date':'2019-03-13', 'exp_date':'2019-04-01','title':'세자보 테스트 데이터 입니다. 세종대 대자보 만만세 우리나라 만만세 만세이에이에이','url':'0','content':'WebProgramming and Database Project','img_url':'0','view_count':'0','like_count':'0','dislike_count':'0','size':'1', 'color': '#E0F8EC'}
    ]
    var box_shape = {'1': ['160', '220'], '2': ['200', '280'], '3': ['280', '360'], '4': ['340', '440']};
    var box_list = [];
@@ -60,10 +60,7 @@ function addElement () {
          var newDiv = document.createElement("div");
          newDiv.id = "box_"+n;
          
-         newDiv.classList.add("mouse_pointer");
-         newDiv.classList.add("box_absolute");
-         newDiv.classList.add("box_boxShadow");
-         newDiv.classList.add("box_borderRadius");
+         newDiv.classList.add("box_css_basic");
          newDiv.style.width = w+'px';
          newDiv.style.height = h+'px';
          newDiv.style.left = min_width+'px';
@@ -86,18 +83,14 @@ function addElement () {
             else if (receive_list[n-1]['size'] == 4){
                newDiv.classList.add("box_fa80");
             }
-            newDiv.classList.add("box_textShadow");
-            newDiv.classList.add("box_fontWeight");
-            newDiv.classList.add("box_overflow");
-            newDiv.classList.add("box_wordBreak");
-            newDiv.classList.add("color");
+            newDiv.classList.add("box_css_text");
             newDiv.style.backgroundColor = receive_list[n-1]['color'];
          }
          else {
             var newImgurl = receive_list[n-1]['img_url'];
             newImgurl = "url('" + newImgurl + "')";
             newDiv.style.backgroundImage = newImgurl;
-            newDiv.classList.add("box_backgroundSize");
+            newDiv.classList.add("box_css_img");
          }
          n+=1;
          //박스 애니메이션 추가
@@ -188,10 +181,7 @@ function addElement () {
          if (x1y1[0] <= max_width && x1y1[1] <= max_height){
             var newDiv = document.createElement("div");
             newDiv.id = "box_"+n;
-            newDiv.classList.add("mouse_pointer");
-            newDiv.classList.add("box_absolute");
-            newDiv.classList.add("box_boxShadow");
-            newDiv.classList.add("box_borderRadius");
+            newDiv.classList.add("box_css_basic");
             newDiv.style.width = w+'px';
             newDiv.style.height = h+'px';
             newDiv.style.left = x0y0[0]+'px';
@@ -214,18 +204,14 @@ function addElement () {
                else if (receive_list[n-1]['size'] == 4){
                   newDiv.classList.add("box_fa80");
                }
-               newDiv.classList.add("box_textShadow");
-               newDiv.classList.add("box_fontWeight");
-               newDiv.classList.add("box_overflow");
-               newDiv.classList.add("box_wordBreak");
-               newDiv.classList.add("color");
+               newDiv.classList.add("box_css_text");
                newDiv.style.backgroundColor = receive_list[n-1]['color'];
             }
             else {
                var newImgurl = receive_list[n-1]['img_url'];
                newImgurl = "url('" + newImgurl + "')";
                newDiv.style.backgroundImage = newImgurl;
-               newDiv.classList.add("box_backgroundSize");
+               newDiv.classList.add("box_css_img");
             }
             //애니메이션 클래스 추가
             n+=1;
@@ -246,6 +232,14 @@ function addElement () {
    }
 }
 
+function box_mouse_over(box_id) {
+   document.getElementById(box_id).sytle.transform = "scale(1.06, 1.06)";
+}
+function box_mouse_out(box_id) {
+   document.getElementById(box_id).sytle.transform = "scale(1, 1)";
+}
+
+//새로고침 요소 함수
 function refleshElement (n){
    if (n ==-1){
       setTimeout(function(){
@@ -267,13 +261,14 @@ function refleshElement (n){
       }, 30);
    }
 }
+//새로고침함수
 function refleshPage(){
    var n = box_done.length - 1;
    setTimeout(refleshElement(n), 100);
 }
 
 //포스트 모달 콘텐츠 추가 및 제거
-function get_post_content(post_id, post_modal) {
+function get_post_content(post_id) {
    var post_id_number = post_id['id'];
    for (var i =0; i< box_done.length; i++){
       var box_done_id = box_done[i];
@@ -281,6 +276,9 @@ function get_post_content(post_id, post_modal) {
          break;
       }
    }
+   //현재 모달 어느 박스인지 식별자 추가함
+   document.getElementById('post_modal_content').setAttribute('title', post_id_number);
+   
    var new_post_box = receive_post_list[i];
    document.getElementById('post_data_start').append(new_post_box['reg_date']);
    document.getElementById('post_data_end').append(new_post_box['exp_date']);
@@ -291,13 +289,8 @@ function get_post_content(post_id, post_modal) {
    document.getElementById('post_content_content').appendChild(document.createElement("br"));
    document.getElementById('post_content_content').append(new_post_box['content']);
    if (new_post_box['url'] == '0') {
-      if (new_post_box['img_url'] == '0') {
-         document.getElementById('post_content_content').style.height = '460px';
-      }
-      else{
-         document.getElementById('post_content_content').style.height = '430px';
-      }
       $("a").remove('#'+post_content_url['id']);
+      document.getElementById('post_content_content').style.height = '460px';
    }
    else{ 
       document.getElementById('post_content_url').setAttribute('href', new_post_box['url']);
@@ -315,21 +308,137 @@ function get_post_content(post_id, post_modal) {
       document.getElementById('share_button').style.marginLeft="15px";
       document.getElementById('share_button').style.marginTop="20px";
       document.getElementById('post_data_start').style.marginLeft="35px";
+      document.getElementById('post_content_text').style.paddingLeft="30px";
    }
    else{
       document.getElementById('post_content_img_image').setAttribute('src', new_post_box['img_url']);
    }
 }
 
+//포스트 모달 초기화 함수
 function remove_post_content() {
-   if (new_post_box['url'] == '0'){
-      var profile_title = document.createElement("a");
-      var profile_title_i = document.createElement("i");
-      profile_title.setAttribute('id', 'post_content_url');
-      profile_title.setAttribute('class', 'post_content_url');
-      profile_title.setAttribute('target', '_blank');
-      profile_title_i.setAttribute('class', 'fas fa-external-link-alt');
-      profile_title.appendChild(profile_title_i);
-      document.appendChild(profile_title);
+   //profile_title 원상복구 작업
+   $("#profile_title").empty();
+   //post_content_content 원상복구 작업
+   document.getElementById('post_content_content').style.height = '380px';
+   //post_content_text 원상복구 작업
+   document.getElementById('post_content_text').style.paddingLeft="15px";
+   //post_content_url 추가작업
+   if (document.getElementById('post_content_url') == undefined){
+      var post_content_url = document.createElement("a");
+      var post_content_url_i = document.createElement("i");
+      post_content_url.setAttribute('id', 'post_content_url');
+      post_content_url.setAttribute('class', 'post_content_url');
+      post_content_url.setAttribute('target', '_blank');
+      post_content_url_i.setAttribute('class', 'fas fa-external-link-alt');
+      post_content_url.appendChild(post_content_url_i);
+      post_content_url.append("외부링크 바로가기");
+      document.getElementById('post_content_text').appendChild(post_content_url);
    }
+   //post_modal_content 원상복구 작업
+   document.getElementById('post_modal_content').style.width="1300px";
+   //post_content_text 원상복구 작업
+   document.getElementById('post_content_text').style.width="50%";
+   //post_top 원상복구 작업
+   document.getElementById('post_top').style.width="800px";
+   //share_button 원상복구 작업
+   document.getElementById('share_button').style.marginLeft="30px";
+   document.getElementById('share_button').style.marginTop="30px";
+   //post_content_img 원상복구 작업
+   if(document.getElementById('post_content_img') != undefined){
+      $('div').remove('#post_content_img');
+   }
+   var post_content_image = document.createElement('div');
+   post_content_image.setAttribute('class', 'post_content_img');
+   post_content_image.setAttribute('id', 'post_content_img');
+   document.getElementById('post_modal_content').appendChild(post_content_image);
+   //post_content_img_content 원상복구 작업
+   if(document.getElementById('post_content_img_content') != undefined){
+      $('div').remove('#post_content_img_content');
+   }
+   var post_content_imgContent = document.createElement('div');
+   post_content_imgContent.setAttribute('class', 'post_content_img_content');
+   post_content_imgContent.setAttribute('id', 'post_content_img_content');
+   document.getElementById('post_content_img').appendChild(post_content_imgContent);
+   //post_content_img_image 원상복구 작업
+   if(document.getElementById('post_content_img_image') != undefined){
+      $('img').remove('#post_content_img_image');
+   }
+   var post_content_imgImage = document.createElement('img');
+   post_content_imgImage.setAttribute('class', 'post_content_img_image');
+   post_content_imgImage.setAttribute('id', 'post_content_img_image');
+   post_content_imgImage.setAttribute('onmouseover', 'post_content_img_image_over();');
+   post_content_imgImage.setAttribute('onmouseout', 'post_content_img_image_out();');
+   document.getElementById('post_content_img_content').appendChild(post_content_imgImage);
+   //post_content_good,bad 원상복구 작업
+   $('div').remove('#post_content_good');
+   $('div').remove('#post_content_bad');
+   var post_contentGood = document.createElement("div");
+   var post_contentBad = document.createElement("div");
+   post_contentGood.setAttribute('class', 'post_content_good');
+   post_contentGood.setAttribute('id', 'post_content_good');
+   post_contentBad.setAttribute('class', 'post_content_bad');
+   post_contentBad.setAttribute('id', 'post_content_bad');
+   document.getElementById('post_content_text').appendChild(post_contentGood);
+   document.getElementById('post_content_text').appendChild(post_contentBad);
+   //post_content_good,bad i 태그 원상복구 작업
+   var like_symbol = document.createElement("i");
+   var bad_symbol = document.createElement("i");
+   like_symbol.setAttribute('class', 'fas fa-thumbs-up');
+   bad_symbol.setAttribute('class', 'fas fa-thumbs-up');
+   document.getElementById('post_content_good').appendChild(like_symbol);
+   document.getElementById('post_content_bad').appendChild(bad_symbol);
+   //post_top 내용물 원상복구 작업
+   if (document.getElementById('post_data_start_title') != undefined){
+      $('div').remove('#post_data_start_title');
+   }
+   $('div').remove('#post_data_start');
+   $('div').remove('#post_data_between');
+   $('div').remove('#post_data_end');
+   var post_data_startTitle = document.createElement('div');
+   var post_dataStart = document.createElement('div');
+   var post_dataBetween = document.createElement('div');
+   var post_dataEnd = document.createElement('div');
+   post_data_startTitle.setAttribute('class', 'post_data_start_title');
+   post_dataStart.setAttribute('class', 'post_data_start');
+   post_dataBetween.setAttribute('class', 'post_data_between');
+   post_dataEnd.setAttribute('class', 'post_data_end');
+   post_data_startTitle.setAttribute('id', 'post_data_start_title');
+   post_dataStart.setAttribute('id', 'post_data_start');
+   post_dataBetween.setAttribute('id', 'post_data_between');
+   post_dataEnd.setAttribute('id', 'post_data_end');
+   document.getElementById('post_top').appendChild(post_data_startTitle);
+   document.getElementById('post_data_start_title').append("게시 기간 :");
+   document.getElementById('post_top').appendChild(post_dataStart);
+   document.getElementById('post_top').appendChild(post_dataBetween);
+   document.getElementById('post_data_between').append("~");
+   document.getElementById('post_top').appendChild(post_dataEnd);
+   //post_content_content 내용 원상복구 작업
+   $("#post_content_content").empty();
 }
+
+
+//클립보드 복사 함수
+function clipboardCopy() {
+   var now_id = document.getElementById('post_modal_content')['title'];
+   now_id = now_id.slice(4);
+   for (var i=0; i<receive_post_list.length; i++){
+      var box_done_id = receive_post_list[i];
+      if (now_id == box_done_id['post_id']){
+         i-=1;
+         break;
+      }
+   }
+   var copyText = receive_post_list[i];
+   var clipboard_textarea = document.createElement('textarea');
+   clipboard_textarea.setAttribute('id', 'clipboard_copy');
+   clipboard_textarea.value = copyText['url'];
+   clipboard_textarea.style.zIndex = "-3000";
+   document.body.appendChild(clipboard_textarea);
+   clipboard_textarea.select();
+   document.execCommand("copy");
+   document.getElementById('clipboard_copy').blur();
+   snackbar("URL 복사완료!");
+   $('textarea').remove('#clipboard_copy');
+}
+

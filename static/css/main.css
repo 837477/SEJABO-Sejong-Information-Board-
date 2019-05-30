@@ -81,12 +81,14 @@ a:hover {
   background-color: #333; /* Black background color */
   color: #fff; /* White text color */
   text-align: center; /* Centered text */
-  border-radius: 2px; /* Rounded borders */
+  border-radius: 8px; /* Rounded borders */
   padding: 16px; /* Padding */
   position: fixed; /* Sit on top of the screen */
   z-index: 1; /* Add a z-index if needed */
-  left: 150px; /* Center the snackbar */
-  bottom: 30px; /* 30px from the bottom */
+  right: 30px; /* Center the snackbar */
+  bottom: 20px; /* 20px from the bottom */
+  cursor: default;
+  box-shadow: 0 0 6px #bbbbbb; 
 }
 #snackbar.show {
   visibility: visible; /* Show the snackbar */
@@ -97,18 +99,18 @@ a:hover {
 }
 @-webkit-keyframes fadein {
   from {bottom: 0; opacity: 0;}
-  to {bottom: 30px; opacity: 1;}
+  to {bottom: 20px; opacity: 1;}
 }
 @keyframes fadein {
   from {bottom: 0; opacity: 0;}
-  to {bottom: 30px; opacity: 1;}
+  to {bottom: 20px; opacity: 1;}
 }
 @-webkit-keyframes fadeout {
-  from {bottom: 30px; opacity: 1;}
+  from {bottom: 20px; opacity: 1;}
   to {bottom: 0; opacity: 0;}
 }
 @keyframes fadeout {
-  from {bottom: 30px; opacity: 1;}
+  from {bottom: 20px; opacity: 1;}
   to {bottom: 0; opacity: 0;}
 }
 
@@ -174,19 +176,32 @@ iframe {
 
 /*------------------------------------------------------------------------*/
 /*BOX css*/
-.box_absolute {position: absolute;}
-.box_boxShadow {box-shadow: 0 0 3px #eeeeee;}
-.box_borderRadius {border-radius: 6px;}
-.box_backgroundSize {background-size: cover;}
-.box_textShadow {text-shadow: 0 1px 2px #222222;}
-.box_fontWeight {font-weight: lighter}
-.box_overflow {overflow: hidden;}
-.box_wordBreak {word-break: break-all;}
-.box_color {color: #444444;}
-.box_fa30 {font-size: 30px;}
+.box_css_basic {
+  position: absolute;
+  box-shadow: 0 0 3px #eeeeee;
+  border-radius: 6px;
+  cursor: pointer;
+  z-index: 250;
+  transition: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+.box_css_text {
+  font-family: Raleway-Black;
+  text-shadow: 0 1px 2px #222222;
+  font-weight: lighter;
+  overflow: hidden;
+  word-break: break-all;
+  color: #444444;
+}
+.box_css_img {background-size: cover;}
+.box_fa30 {font-size: 30px;} 
 .box_fa40 {font-size: 38px;}
 .box_fa60 {font-size: 60px;}
-.box_fa80 {font-size: 80px;}
+.box_fa80 {font-size: 75px;}
+[id^="box_"]:hover {
+  margin-top: -10px;
+  box-shadow: 0 0 12px 2px #aaaaaa;
+}
 /*------------------------------------------------------------------------*/
 
 
@@ -692,7 +707,7 @@ border: none;
 .new_page {
   display: block;
   float: right;
-  width: atuo;
+  width: auto;
   height: auto;
   margin: 0.5% 0.5%;
   margin-left: 0px;
@@ -703,7 +718,15 @@ border: none;
 .login_button {
   display: block;
   float: right;
-  width: atuo;
+  width: auto;
+  height: auto;
+  margin: 0.5% 0.5%;
+  margin-left: 0px;
+}
+.myinfo_button {
+  display: block;
+  float: right;
+  width: auto;
   height: auto;
   margin: 0.5% 0.5%;
   margin-left: 0px;
@@ -712,7 +735,7 @@ border: none;
 {
   display: block;
   float: right;
-  width: atuo;
+  width: auto;
   height: auto;
   margin: 0.5% 0.5%;
   margin-left: 0px;
@@ -723,7 +746,7 @@ border: none;
   position: absolute;
   top: 1%;
   left: 0.5%;
-  width: atuo;
+  width: auto;
   height: auto;
 }
 .board-title
@@ -783,19 +806,7 @@ border: none;
       z-index: 100;
 }
 
-/*보드 속 포스트 박스*/
-[id^=box]
-{
-  z-index: 250;
-}
 
-[id^=box] {
-  transition-timing-function: ease-out;
-  transition-duration: 0.7s;
-}
-[id^=box]:hover {
-  transform: scale(1.1, 1.1);
-}
 
 
 @media screen and (max-width: 1000px) {
@@ -804,7 +815,7 @@ border: none;
     position: relative;
     display: block;
     float: right;
-    width: atuo;
+    width: auto;
     height: auto;
     margin: 2% 1.5%;
     margin-left: 0px;
@@ -813,9 +824,17 @@ border: none;
     position: relative;
     display: block;
     float: right;
-    width: atuo;
+    width: auto;
     height: auto;
     margin: 2% 1.5%;
+    margin-left: 0px;
+  }
+  .myinfo_button {
+    display: block;
+    float: right;
+    width: auto;
+    height: auto;
+    margin: 0.5% 0.5%;
     margin-left: 0px;
   }
   .search_button
@@ -823,7 +842,7 @@ border: none;
     position: relative;
     display: block;
     float: right;
-    width: atuo;
+    width: auto;
     height: auto;
     margin: 2% 1.5%;
     margin-left: 0px;
@@ -833,7 +852,7 @@ border: none;
     display: block;
     position: relative;
     float: left;
-    width: atuo;
+    width: auto;
     height: auto;
     margin: 1.5% 1.5%;
       
@@ -897,4 +916,9 @@ border: none;
     cursor: default;
     transition: 0.7s;
   }
+}
+
+
+.idenfication_test {
+    border-radius: 8px;
 }
