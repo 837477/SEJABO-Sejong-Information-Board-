@@ -251,6 +251,8 @@ function post_content_img_image_out(){
 }
 //=============================================================//
 //게시글 관리
+var filter = "win16|win32|win64|mac|macintel"; 
+
 var post_admin_cnt = 0;
 
 var post_admin_modal = document.getElementById("post_admin_modal");
@@ -281,25 +283,51 @@ window.onclick = function (event) {
   }
 }
 
+
+
 $('#post_select_box_XL').click(function(){
-  $('.post_select_box_img').css('width', '340');
-  $('.post_select_box_img').css('height', '440');
+  if (navigator.platform) {
+    if (filter.indexOf(navigator.platform.toLowerCase()) < 0) {
+      $('.post_select_box_img').css('width', '340');
+      $('.post_select_box_img').css('height', '440');
+    }
+    else {
+    }
+  }
   $('#post_admin_modal_date_select').attr('max','7')
 });
 $('#post_select_box_L').click(function(){
-  $('.post_select_box_img').css('width', '280');
-  $('.post_select_box_img').css('height', '360');
-  $('#post_admin_modal_date_select').attr('max','10')
+  if (navigator.platform) {
+    if (filter.indexOf(navigator.platform.toLowerCase()) < 0) {
+      $('.post_select_box_img').css('width', '280');
+      $('.post_select_box_img').css('height', '360');
+    }
+    else {
+    }
+  }
+  $('#post_admin_modal_date_select').attr('max', '10')
 });
 $('#post_select_box_M').click(function(){
-  $('.post_select_box_img').css('width', '200');
-  $('.post_select_box_img').css('height', '280');
-  $('#post_admin_modal_date_select').attr('max','15')
+  if (navigator.platform) {
+    if (filter.indexOf(navigator.platform.toLowerCase()) < 0) {
+      $('.post_select_box_img').css('width', '200');
+      $('.post_select_box_img').css('height', '280');
+    }
+    else {
+    }
+  }
+  $('#post_admin_modal_date_select').attr('max', '15')
 });
 $('#post_select_box_S').click(function(){
-  $('.post_select_box_img').css('width', '160');
-  $('.post_select_box_img').css('height', '220');
-  $('#post_admin_modal_date_select').attr('max','20')
+  if (navigator.platform) {
+    if (filter.indexOf(navigator.platform.toLowerCase()) < 0) {
+      $('.post_select_box_img').css('width', '160');
+      $('.post_select_box_img').css('height', '220');
+    }
+    else {
+    }
+  }
+  $('#post_admin_modal_date_select').attr('max', '20')
 });
 
 //0 = 첫 작성 창
@@ -326,6 +354,13 @@ $('#post_admin_next_button').click(function(){
   //포스트 사이즈 선택 창
   else if(post_admin_cnt == 1)
   {
+    if (navigator.platform) {
+      if (filter.indexOf(navigator.platform.toLowerCase()) < 0) {
+      }
+      else {
+        $('#post_warning').text('(PC에서 보여질 크기를 선택해주세요.)');
+      }
+    }
     $('#post_admin_title').text('포스트 사이즈 설정');
     //이전 버튼 보여줌
     $('#post_admin_prev_button').removeClass('post_admin_display_none');

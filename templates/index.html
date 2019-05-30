@@ -196,7 +196,7 @@
 			<!--포스트 관리 모달 부 타이틀-->
 			<div id="post_admin_modal_title" class="form-group">
 				<div class="post_admin_top">
-					<h2 id="post_admin_title" style="font-weight: bold;">게시글 작성</h2>
+					<h2 id="post_admin_title"   class="post_admin_title">게시글 작성</h2>
 				</div>
 				<span class="post_admin_modal_close">&times;</span>
 			</div>
@@ -211,8 +211,7 @@
 
 				<div class="form-group">
 					<labelfor="exampleFormControlTextarea1">내 용</label>
-						<textarea class="form-control" id="exampleFormControlTextarea1" style="resize: none;"
-							rows="15"></textarea>
+						<textarea class="form-control post_admin_textarea" id="exampleFormControlTextarea1"></textarea>
 				</div>
 				<div class="form-group">
 					<div class="form-group">
@@ -237,7 +236,7 @@
 						onclick="">S</button>
 				</div>
 				<br>
-				<p style="text-align: center">(실제 게시될 사이즈 입니다)</p>
+				<p id="post_warning" style="text-align: center">(실제 게시될 사이즈 입니다)</p>
 				<br>
 				<div class="form-group post_select_img_box">
 					<img id="post_select_box_img" class="post_select_box_img" src="../static/img/SejaboLOGO.png"
@@ -356,7 +355,7 @@
 	</div>
 
 	<!--보드 공간-->
-	<div id="board1" class="board1"></div>
+	<div id="media_test" class="board1"></div>
 
 </body>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -371,7 +370,7 @@
 
 
 <script src="../static/vendor/select2/select2.min.js"></script>
-<script src="../static/js/board.js"></script>
+<!--<script src="../static/js/board.js"></script>-->
 <script src="../static/js/myinfo.js"></script>
 <script src="../static/js/modal.js"></script>
 <script src="../static/js/main.js"></script>
