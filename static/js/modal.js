@@ -319,10 +319,10 @@ window.onclick = function (event) {
 $('#post_select_box_XL').click(function(){
   if (navigator.platform) {
     if (filter.indexOf(navigator.platform.toLowerCase()) < 0) {
-      $('.post_select_box_img').css('width', '340');
-      $('.post_select_box_img').css('height', '440');
     }
     else {
+      $('.post_select_box_img').css('width', '340');
+      $('.post_select_box_img').css('height', '440');
     }
   }
   $('#post_admin_modal_date_select').attr('max','7')
@@ -330,10 +330,11 @@ $('#post_select_box_XL').click(function(){
 $('#post_select_box_L').click(function(){
   if (navigator.platform) {
     if (filter.indexOf(navigator.platform.toLowerCase()) < 0) {
-      $('.post_select_box_img').css('width', '280');
-      $('.post_select_box_img').css('height', '360');
+      
     }
     else {
+      $('.post_select_box_img').css('width', '280');
+      $('.post_select_box_img').css('height', '360');
     }
   }
   $('#post_admin_modal_date_select').attr('max', '10')
@@ -341,10 +342,10 @@ $('#post_select_box_L').click(function(){
 $('#post_select_box_M').click(function(){
   if (navigator.platform) {
     if (filter.indexOf(navigator.platform.toLowerCase()) < 0) {
-      $('.post_select_box_img').css('width', '200');
-      $('.post_select_box_img').css('height', '280');
     }
     else {
+      $('.post_select_box_img').css('width', '200');
+      $('.post_select_box_img').css('height', '280');
     }
   }
   $('#post_admin_modal_date_select').attr('max', '15')
@@ -352,10 +353,10 @@ $('#post_select_box_M').click(function(){
 $('#post_select_box_S').click(function(){
   if (navigator.platform) {
     if (filter.indexOf(navigator.platform.toLowerCase()) < 0) {
-      $('.post_select_box_img').css('width', '160');
-      $('.post_select_box_img').css('height', '220');
     }
     else {
+      $('.post_select_box_img').css('width', '160');
+      $('.post_select_box_img').css('height', '220');
     }
   }
   $('#post_admin_modal_date_select').attr('max', '20')
@@ -387,9 +388,10 @@ $('#post_admin_next_button').click(function(){
   {
     if (navigator.platform) {
       if (filter.indexOf(navigator.platform.toLowerCase()) < 0) {
+        $('#post_warning').text('(PC에서 보여질 크기를 선택해주세요.)');
       }
       else {
-        $('#post_warning').text('(PC에서 보여질 크기를 선택해주세요.)');
+        
       }
     }
     $('#post_admin_title').text('포스트 사이즈 설정');
@@ -480,3 +482,30 @@ $('#post_admin_prev_button').click(function(){
   }
 });
 
+
+//======================================================================//
+//포스트 수정 모달 부분.
+var post_edit_modal = document.getElementById("post_edit_modal");
+var post_edit_modal_button = document.getElementById("myinfo_user_post_fix");
+var post_edit_modal_close = document.getElementsByClassName("post_edit_modal_close")[0];
+
+// When the user clicks the button, open the modal
+post_edit_modal_button.onclick = function () {
+  post_edit_modal.style.display = "block";
+  $('#post_edit_modal_content').addClass("magictime");
+  $('#post_edit_modal_content').addClass("spaceInDown");
+}
+// When the user clicks on <span> (x), close the modal
+post_edit_modal_close.onclick = function () {
+  post_edit_modal.style.display = "none";
+  $('#post_edit_modal_content').removeClass("magictime");
+  $('#post_edit_modal_content').removeClass("spaceInDown");
+}
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+  if (event.target == post_edit_modal) {
+    post_edit_modal.style.display = "none";
+    $('#post_edit_modal_content').removeClass("magictime");
+    $('#post_edit_modal_content').removeClass("spaceInDown");
+  }
+}

@@ -40,8 +40,8 @@
 		onclick="location_now();">세종이노센터</button>
 	<button id="new_page" type="button" class="btn btn-info new_page" onclick="refleshPage();">새로고침</button>
 	<button id="search_button" type="button" class="btn btn-secondary search_button" onclick="">검색</button>
-	<button id="login_button" type="button" class="btn btn-secondary login_button" style="display: none">로그인</button>
-	<button id="myinfo_button" type="button" class="btn btn-secondary login_button">내정보</button>
+	<button id="login_button" type="button" class="btn btn-secondary login_button">로그인</button>
+	<button id="myinfo_button" type="button" class="btn btn-secondary myinfo_button display_none">내정보</button>
 
 	<!--상단 타이틀-->
 	<div class="board-title">
@@ -62,13 +62,13 @@
 		<div id="login_modal_content" class="login_modal_content">
 			<span class="login_modal_close">&times;</span>
 
-			<form class="login100-form validate-form">
+			<div class="login100-form validate-form">
 				<span class="login100-form-title p-b-55">
-					Login
+					로그인
 				</span>
 
 				<div class="wrap-input100 validate-input m-b-16" data-validate="Valid email is required: ex@abc.xyz">
-					<input class="input100" type="text" name="email" placeholder="Email" autocomplete="off">
+					<input class="input100" type="text" name="student_ID" placeholder="학번" autocomplete="off">
 					<span class="focus-input100"></span>
 					<span class="symbol-input100">
 						<span class="lnr lnr-envelope"></span>
@@ -76,7 +76,7 @@
 				</div>
 
 				<div class="wrap-input100 validate-input m-b-16" data-validate="Password is required">
-					<input class="input100" type="password" name="pass" placeholder="Password" autocomplete="off">
+					<input class="input100" type="password" name="student_PW" placeholder="비밀번호" autocomplete="off">
 					<span class="focus-input100"></span>
 					<span class="symbol-input100">
 						<span class="lnr lnr-lock"></span>
@@ -84,11 +84,11 @@
 				</div>
 
 				<div class="container-login100-form-btn p-t-25">
-					<button class="login100-form-btn">
-						Login
+					<button class="login100-form-btn" onclick="sejabo_login()">
+						로그인
 					</button>
 				</div>
-			</form>
+			</div>
 
 		</div>
 	</div>
@@ -215,6 +215,7 @@
 				</div>
 				<div class="form-group">
 					<div class="form-group">
+						<input id = "post_creat_URL" class="form-control form-control-sm" type="text" placeholder="첨부링크">
 						<label for="exampleFormControlFile1">첨 부 파 일</label>
 						<input type="file" class="form-control-file" id="exampleFormControlFile1">
 					</div>
@@ -292,6 +293,44 @@
 		</div>
 	</div>
 
+	<!--포스트 수정 모달-->
+	<div id="post_edit_modal" class="post_edit_modal">
+			<!-- Modal content -->
+			<div id="post_edit_modal_content" class="post_edit_modal_content">
+	
+				<!--포스트 관리 모달 부 타이틀-->
+				<div id="post_edit_modal_title" class="form-group">
+					<div class="post_edit_modal_top">
+						<h2 id="post_edit_title"   class="post_edit_title">게시글 수정</h2>
+					</div>
+					<span class="post_edit_modal_close">&times;</span>
+				</div>
+	
+				<!--포스트 수정 창-->
+				<div id="post_edit" class="form-group">
+					<br>
+					<hr>
+					<div class="form-group">
+						<input class="form-control form-control-lg" type="text" placeholder="제목">
+					</div>
+	
+					<div class="form-group">
+						<labelfor="exampleFormControlTextarea1">내 용</label>
+							<textarea class="form-control post_edit_textarea" id="exampleFormControlTextarea1"></textarea>
+					</div>
+					<div class="form-group">
+						<div class="form-group">
+							<input id = "post_edit_URL" class="form-control form-control-sm" type="text" placeholder="첨부링크">
+						</div>
+					</div>
+				</div>
+	
+				<button id="post_edit_button" type="button" class="btn btn-success post_edit_button"
+					onclick="">수정하기</button>
+	
+			</div>
+		</div>
+
 	<!--세자보 메인 모달-->
 	<div id="main_modal" class="modal">
 		<div id="main_modal_box" class="main_modal-box">
@@ -355,22 +394,23 @@
 	</div>
 
 	<!--보드 공간-->
-	<div id="media_test" class="board1"></div>
+	<div id="board1" class="board1"></div>
 
 </body>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-	integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-	crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-	integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-	crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-	integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-	crossorigin="anonymous"></script>
+<!-- JQuery JS -->
+<script src="/static/js/jquery/jquery.min.js"></script>
+
+<!-- Popper.JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+<!-- Bootstrap JS -->
+<script type="text/javascript" src="/static/js/bootstrap/bootstrap.min.js"></script>
 
 
 <script src="../static/vendor/select2/select2.min.js"></script>
-<script src="../static/js/board.js"></script>
+<!--<script src="../static/js/board.js"></script>-->
+<script src="../static/js/ajax.js"></script>
+<script src="../static/js/user_ajax.js"></script>
 <script src="../static/js/myinfo.js"></script>
 <script src="../static/js/modal.js"></script>
 <script src="../static/js/main.js"></script>
