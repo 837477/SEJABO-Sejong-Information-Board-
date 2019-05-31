@@ -13,9 +13,15 @@ function sejabo_login(){
     
         var json = a_jax.responseJSON;
 
+        console.log(json);
+
         if(json['result'] == "input wrong")
         {
             alert("로그인에 실패했습니다.");
+        }
+        else if(json['result'] == "password incorrect")
+        {
+            alert("비밀번호가 틀렸습니다.");
         }
         else if(json['result'] == "success")
         {
