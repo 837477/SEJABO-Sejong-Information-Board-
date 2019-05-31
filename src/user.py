@@ -33,7 +33,7 @@ def add_post():
 	if current_user is None: abort(403)
 	with g.db.cursor() as cursor:
 		sql = "SELECT * from post where author = %s"
-		cursor.execute(sql, (current_user['select_id'],))
+		cursor.execute(sql, (current_user['student_id'],))
 		result = cursor.fetchone()
 	if result is not None: abort(400)
 	build = request.form.getlist('build')
@@ -87,7 +87,7 @@ def modify_post():
 	if current_user is None: abort(403)
 	with g.db.cursor() as cursor:
 		sql = "SELECT * from post where author = %s"
-		cursor.execute(sql, (current_user['select_id'],))
+		cursor.execute(sql, (current_user['student_id'],))
 		result = cursor.fetchone()
 	if result is not None: abort(400)
 	title = request.form['title']

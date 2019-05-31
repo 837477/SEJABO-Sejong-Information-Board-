@@ -314,8 +314,7 @@ window.onclick = function (event) {
   }
 }
 
-
-
+//박스 선택 창
 $('#post_select_box_XL').click(function(){
   if (navigator.platform) {
     if (filter.indexOf(navigator.platform.toLowerCase()) < 0) {
@@ -362,74 +361,89 @@ $('#post_select_box_S').click(function(){
   $('#post_admin_modal_date_select').attr('max', '20')
 });
 
+//창 이동!
 //0 = 첫 작성 창
 //1 = 포스트 사이즈 선택 창
 //2 = 포스트 게시장소/기한 선택 창
 $('#post_admin_next_button').click(function(){
-  post_admin_cnt++;
+  
+  if(post_admin_cnt == 0)
+  {
+    var title_len = $('#post_creat_title').val();
+    var textarea_len = $('#post_creat_textarea').val();
 
+    if(title_len.length >= 100) 
+    {
+      alert("제목의 길이는 100자 미만입니다.");
+      post_admin_cnt--;
+    }
+  }
+  post_admin_cnt++;
   //첫 작성 창
   if(post_admin_cnt == 0)
   {
     $('#post_admin_title').text('게시글 작성');
+
     //이전 버튼 숨겨줌
-    $('#post_admin_prev_button').addClass('post_admin_display_none');
+    $('#post_admin_prev_button').addClass('display_none');
 
     //포스트 작성 창 보여줌.
-    $('#post_creat').removeClass('post_admin_display_none');
+    $('#post_creat').removeClass('display_none');
 
     //남은 2개의 창은 숨겨줌
-    $('#post_select_box').addClass('post_admin_display_none');
-    $('#post_select_date').addClass('post_admin_display_none');
+    $('#post_select_box').addClass('display_none');
+    $('#post_select_date').addClass('display_none');
   }
 
   //포스트 사이즈 선택 창
   else if(post_admin_cnt == 1)
   {
+    //사진 설명 글 (피시와 모바일에서 다르게 보임)
     if (navigator.platform) {
       if (filter.indexOf(navigator.platform.toLowerCase()) < 0) {
         $('#post_warning').text('(PC에서 보여질 크기를 선택해주세요.)');
       }
-      else {
-        
-      }
     }
+
     $('#post_admin_title').text('포스트 사이즈 설정');
+    
     //이전 버튼 보여줌
-    $('#post_admin_prev_button').removeClass('post_admin_display_none');
+    $('#post_admin_prev_button').removeClass('display_none');
 
     //포스트 사이즈 선택 창 보여줌
-    $('#post_select_box').removeClass('post_admin_display_none');
+    $('#post_select_box').removeClass('display_none');
 
     //남은 2개의 창은 숨겨줌
-    $('#post_creat').addClass('post_admin_display_none');
-    $('#post_select_date').addClass('post_admin_display_none');
+    $('#post_creat').addClass('display_none');
+    $('#post_select_date').addClass('display_none');
   }
 
   else if(post_admin_cnt == 2)
   {
     $('#post_admin_title').text('게시 장소 및 기간 설정');
-    //이전 버튼 보여줌
-    $('#post_admin_next_button').text('완료');
+
+    //완료 버튼 보여줌
+    $('#post_admin_submit_button').removeClass('display_none');
 
     //포스트 게시 장소/기한 창 보여줌
-    $('#post_select_date').removeClass('post_admin_display_none');
+    $('#post_select_date').removeClass('display_none');
 
     //남은 2개의 창은 숨겨줌
-    $('#post_create').addClass('post_admin_display_none');
-    $('#post_select_box').addClass('post_admin_display_none');
+    $('#post_create').addClass('display_none');
+    $('#post_select_box').addClass('display_none');
   }
+  /*
   else
   {
-    post_admin_cnt = 0;
+    post_admin_cnt = 0; //
     post_admin_modal.style.display = "none";
     $('#post_admin_modal_content').removeClass("magictime");
     $('#post_admin_modal_content').removeClass("spaceInDown");
-    snackbar('등록 완료');
   }
+  */
 });
 
-
+//이번버튼
 $('#post_admin_prev_button').click(function(){
   post_admin_cnt--;
 
@@ -437,48 +451,48 @@ $('#post_admin_prev_button').click(function(){
   if(post_admin_cnt == 0)
   {
     $('#post_admin_title').text('게시글 작성');
-    $('#post_admin_next_button').text('다음');
     
     //이전 버튼 숨겨줌
-    $('#post_admin_prev_button').addClass('post_admin_display_none');
+    $('#post_admin_prev_button').addClass('display_none');
 
     //포스트 작성 창 보여줌.
-    $('#post_creat').removeClass('post_admin_display_none');
+    $('#post_creat').removeClass('display_none');
 
     //남은 2개의 창은 숨겨줌
-    $('#post_select_box').addClass('post_admin_display_none');
-    $('#post_select_date').addClass('post_admin_display_none');
+    $('#post_select_box').addClass('display_none');
+    $('#post_select_date').addClass('display_none');
   }
 
   //포스트 사이즈 선택 창
   else if(post_admin_cnt == 1)
   {
     $('#post_admin_title').text('포스트 사이즈 설정');
-    $('#post_admin_next_button').text('다음');
+    $('#post_admin_submit_button').addClass('display_none');
 
     //이전 버튼 보여줌
-    $('#post_admin_prev_button').removeClass('post_admin_display_none');
+    $('#post_admin_prev_button').removeClass('display_none');
 
     //포스트 사이즈 선택 창 보여줌
-    $('#post_select_box').removeClass('post_admin_display_none');
+    $('#post_select_box').removeClass('display_none');
 
     //남은 2개의 창은 숨겨줌
-    $('#post_creat').addClass('post_admin_display_none');
-    $('#post_select_date').addClass('post_admin_display_none');
+    $('#post_creat').addClass('display_none');
+    $('#post_select_date').addClass('display_none');
   }
 
   else if(post_admin_cnt == 2)
   {
     $('#post_admin_title').text('게시 장소 및 기간 설정');
-    //이전 버튼 보여줌
-    $('#post_admin_next_button').text('완료');
+
+    //완료버튼 보여줌.
+    $('#post_admin_submit_button').removeClass('display_none');
 
     //포스트 게시 장소/기한 창 보여줌
-    $('#post_select_date').removeClass('post_admin_display_none');
+    $('#post_select_date').removeClass('display_none');
 
     //남은 2개의 창은 숨겨줌
-    $('#post_create').addClass('post_admin_display_none');
-    $('#post_select_box').addClass('post_admin_display_none');
+    $('#post_create').addClass('display_none');
+    $('#post_select_box').addClass('display_none');
   }
 });
 
