@@ -1,4 +1,10 @@
 var filter = "win16|win32|win64|mac|macintel";
+
+$(function () {
+   $('[data-toggle="tooltip"]').tooltip()
+})
+
+
 /*
 if (navigator.platform) {
     if (filter.indexOf(navigator.platform.toLowerCase()) < 0) {
@@ -515,6 +521,7 @@ function get_post_content(post_id) {
          var hash__ = MD5(receive_list_post_one['author_id']+"");
          var data__ = new Identicon(hash__, img_options).toString();
          $('#profile_img_id').attr("src", "data:image/png;base64," + data__);
+         $('#profile_img_id').attr("data-original-title", new_post_box['author_major'] +" "+ new_post_box['author_id'] +" "+ new_post_box['author_name']);
          var new_post_box_date_start = new Date(new_post_box['reg_date']+'+0900');
          var new_post_box_date_end = new Date(new_post_box['exp_date']+'+0900');
          var post_year_start = new_post_box_date_start.getFullYear();
@@ -572,6 +579,7 @@ function get_post_content(post_id) {
          var hash__ = MD5(receive_list_post_one['author_id']+"");
          var data__ = new Identicon(hash__, img_options).toString();
          $('#profile_img_id').attr("src", "data:image/png;base64," + data__);
+         $('#profile_img_id').attr("data-original-title", new_post_box['author_major'] +" "+ new_post_box['author_id'] +" "+ new_post_box['author_name']);
          document.getElementById('post_modal_content').setAttribute('title', new_post_box['post_id']);
          var new_post_box_date_start = new Date(new_post_box['reg_date']+'+0900');
          var new_post_box_date_end = new Date(new_post_box['exp_date']+'+0900');
