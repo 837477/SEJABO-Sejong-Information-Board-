@@ -5,7 +5,7 @@ var user_POST; //사용자 게시글
 var user_LIKE_POSTS = []; //사용자 좋아요 게시글
 var user_DISLIKE_POSTS = []; //사용자 싫어요 게시글
 
-get_user_info();
+if(localStorage.getItem('sejabo_token') != null) get_user_info();
 
 function myinfo_user_page(json)
 {

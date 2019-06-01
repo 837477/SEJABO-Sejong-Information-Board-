@@ -29,7 +29,7 @@ def get_posts(build, width, height):
       sql = sql[0] + build + sql[1]
       cursor.execute(sql)
       result=cursor.fetchall()
-  # result = block_sort.main(result, width, height)
+      #result = block_sort.main(result, width, height)
    return jsonify(
       list=result,
       result="success"
@@ -65,10 +65,10 @@ def like(post_id,interest):
       ##해당 게시물에 대해 호감 비호감이 등록되어 있는 경우, 호감,비호감의 전환이 있는경우
       ## 이미 호감이 등록되어있는 게시물에 똑같이 호감을 등록할 경우.
       ## 이미 비호감이 등록되어있는 게시물에 똑같이 비호감을 등록할 경우.
+         print(result, interest)
          if result['interest']==interest:
             sql = 'DELETE FROM like_dislike where post_id=%s and student_id =%s'
             cursor.execute(sql,(post_id, current_user['student_id']))
-            return jsonify(result="success")
          else:
             if result['interest']==0:
                sql="UPDATE like_dislike set interest=1 where student_id=%s and interest=0 and post_id=%s;"

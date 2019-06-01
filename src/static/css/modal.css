@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&display=swap&subset=korean');
 /*=====================================================*/
 /*공통 모달 요소*/
 .none_display{
@@ -86,7 +87,7 @@ box-shadow: 0 0 8px  #888888;
 /* ======================================================== */
 /* 내정보 모달 */
 .myinfo_modal {
-  font-family: Raleway-Black;
+  font-family: 'Noto Sans KR', sans-serif;
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 900; /* Sit on top */
@@ -594,7 +595,7 @@ box-shadow: 0 0 8px  #888888;
  /* ======================================================== */
 /* 포스트모달 */
 .post_modal {
-  font-family: Raleway-Black;
+  font-family: 'Noto Sans KR', sans-serif;
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 900; /* Sit on top */
@@ -804,12 +805,13 @@ box-shadow: 0 0 8px  #888888;
   width: 280px;
   height: 60px;
   border-radius: 8px;
-  color: white;
+  border: 4px solid #A9F5A9;
+  color: #A9F5A9;
   font-size: 25px;
   padding: 10px;
   text-align: center;
-  background-color: #30A92C;
-  box-shadow: 0 0 8px #777777;
+  background-color: #ffffff;
+  box-shadow: 0 0 8px rgba(0,0,0,0);
   cursor: pointer;
   transition: 0.6s;
 }
@@ -821,24 +823,47 @@ box-shadow: 0 0 8px  #888888;
   height: 60px;
   margin-left: 20px;
   border-radius: 8px;
-  color: white;
+  border: 4px solid #F6CED8;
+  color: #F6CED8;
   font-size: 25px;
   padding: 10px;
   text-align: center;
-  background-color: #E93333;
-  box-shadow: 0 0 8px #777777;
+  background-color: #ffffff;
+  box-shadow: 0 0 8px rgba(0,0,0,0);
   cursor: pointer;
   transition: 0.6s;
-}
+}/*
 .post_content_good:hover {
+  color: white;
   background-color: #068E06;
   box-shadow: 0 0 8px #fefefe;
 }
 .post_content_bad:hover {
-  background-color: #B60B0B;
+  color: white;
+  background-color: #FA5882;
+  box-shadow: 0 0 8px #fefefe;
+}*/
+/*board.js 에서 추가되 css 함수*/
+.post_content_good_nonclick {
+  color: #A9F5A9;
+  background-color: #ffffff;
+  box-shadow: 0 0 8px rgba(0,0,0,0);
+}
+.post_content_good_click {
+  color: white;
+  background-color: #068E06;
   box-shadow: 0 0 8px #fefefe;
 }
-
+.post_content_bad_nonclick {
+  color: #F6CED8;
+  background-color: #ffffff;
+  box-shadow: 0 0 8px rgba(0,0,0,0);
+}
+.post_content_bad_click {
+  color: white;
+  background-color: #FA5882;
+  box-shadow: 0 0 8px #fefefe;
+}
 /* ======================================================== */
 /* 포스트 관리 모달 */
 .post_admin_modal {
@@ -1131,7 +1156,7 @@ label {
   /* ======================================================== */
   /* 포스트모달 = 모바일*/
   .post_modal {
-    font-family: Raleway-Black;
+    font-family: 'Noto Sans KR', sans-serif;
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 900; /* Sit on top */
@@ -1181,7 +1206,7 @@ label {
   }
   .post_top {
     position: absolute;
-    width: 73%;
+    width: 200px;
     height: 40px;
     left: 50%;
     top: 0;
@@ -1192,6 +1217,7 @@ label {
     border-radius: 8px;
     cursor: default;
     transition: 0.4s;
+    font-weight: bold;
   }
   .post_top:hover {
     transform: translate(-53%, 0) scale(1.06, 1.06);
@@ -1201,7 +1227,7 @@ label {
     float: left;
     font-size: 15px;
     color: #333333;
-    margin-left: 60px;
+    margin-left: 15px;
   }
   .post_data_between {
     float: left;
@@ -1237,7 +1263,7 @@ label {
     top: 50%;
     transform: translate(-50%,-50%);
     border-radius: 8px;
-    box-shadow: 0 0 8px #666666;
+    box-shadow: 0 0 4px #666666;
     cursor: pointer;
     transition: 0.6s ease;
   }
@@ -1289,6 +1315,7 @@ label {
     width: 80%;
     height: 50px;
     font-size: 20px;
+    font-weight: bold;
     color: #333333;
     background-color: rgba(220,220,220,0.5);
     border-radius: 8px;
@@ -1337,57 +1364,72 @@ label {
     background-color: rgba(120, 120, 120, 0.7);
     color: #333333;
   }
+
   .post_content_good {
-    position: relative;
-    float: left;
-    left: 0px;
-    top: 0px;
-    bottom: 0px;
-    width: 40%;
-    height: 40px;
-    border-radius: 8px;
-    color: white;
-    font-size: 20px;
-    padding: 5px;
-    text-align: center;
-    background-color: #30A92C;
-    box-shadow: 0 0 8px #777777;
-    cursor: pointer;
-    transition: 0.6s;
-    margin-left: 10px;
-  }
-  .post_content_bad {
-    position: relative;
-    float: right;
-    right: 0px;
-    top: 0px;
-    bottom: 0px;
-    width: 40%;
-    height: 40px;
-    margin-left: 20px;
-    border-radius: 8px;
-    color: white;
-    font-size: 20px;
-    padding: 5px;
-    text-align: center;
-    background-color: #E93333;
-    box-shadow: 0 0 8px #777777;
-    cursor: pointer;
-    transition: 0.6s;
-    margin-right: 10px;
-  }
-  .post_content_good:hover {
-    background-color: #068E06;
-    box-shadow: 0 0 8px #fefefe;
-  }
-  .post_content_bad:hover {
-    background-color: #B60B0B;
-    box-shadow: 0 0 8px #fefefe;
-  }
+  border: 2px solid #A9F5A9;
+  color: #A9F5A9;
+  background-color: #ffffff;
+  box-shadow: 0 0 8px rgba(0,0,0,0);
+  position: relative;
+  float: left;
+  left: 0px;
+  top: 0px;
+  bottom: 0px;
+  width: 40%;
+  height: 40px;
+  border-radius: 8px;
+  font-size: 20px;
+  padding: 5px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.6s;
+  margin-left: 10px;
+}
+.post_content_bad {
+  border: 2px solid #F6CED8;
+  color: #F6CED8;
+  background-color: #ffffff;
+  box-shadow: 0 0 8px rgba(0,0,0,0);
+  position: relative;
+  float: right;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  width: 40%;
+  height: 40px;
+  margin-left: 20px;
+  border-radius: 8px;
+  font-size: 20px;
+  padding: 5px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.6s;
+  margin-right: 10px;
+}
+.post_content_good_nonclick {
+  color: #A9F5A9;
+  background-color: #ffffff;
+  box-shadow: 0 0 8px rgba(0,0,0,0);
+}
+.post_content_good_click {
+  color: white;
+  background-color: #068E06;
+  box-shadow: 0 0 8px #fefefe;
+}
+.post_content_bad_nonclick {
+  color: #F6CED8;
+  background-color: #ffffff;
+  box-shadow: 0 0 8px rgba(0,0,0,0);
+}
+.post_content_bad_click {
+  color: white;
+  background-color: #FA5882;
+  box-shadow: 0 0 8px #fefefe;
+}
   /* ======================================================== */
   /* 내정보 모달  = 모바일*/
   .myinfo_modal {
-    font-family: Raleway-Black;
+    font-family: 'Noto Sans KR', sans-serif;
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 900; /* Sit on top */
