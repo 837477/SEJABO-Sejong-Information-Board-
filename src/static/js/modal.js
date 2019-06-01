@@ -109,19 +109,12 @@ var myinfo_post_bad_cnt = 0;
 
 // When the user clicks the button, open the modal
 myinfo_button.onclick = function () {
+  $('#myinfo_post_bigbox').empty();
+  get_user_info();
   myinfo_modal.style.display = "block";
+  $('#myinfo_post_bigbox').empty();
   $('#myinfo_modal_content').addClass("magictime");
   $('#myinfo_modal_content').addClass("spaceInDown");
-  if (myinfo_post_good_cnt == 1){
-    remove_myinfo_post_contents();
-    get_user_info();
-    likeDivMake(user_LIKE_POSTS);
-  }
-  else if (myinfo_post_bad_cnt == 1){
-    remove_myinfo_post_contents();
-    get_user_info();
-    likeDivMakeNot(user_DISLIKE_POSTS);
-  }
 }
 // When the user clicks on <span> (x), close the modal
 myinfo_modal_close.onclick = function () {
@@ -293,7 +286,7 @@ $('#post_select_box_XL').click(function(){
       $('.post_select_box_img').css('height', '440');
     }
   }
-  $('#post_admin_modal_date_select').attr('max','7')
+  $('#post_admin_modal_date_select').attr('max','6')
 });
 $('#post_select_box_L').click(function(){
   if (navigator.platform) {
@@ -305,7 +298,7 @@ $('#post_select_box_L').click(function(){
       $('.post_select_box_img').css('height', '360');
     }
   }
-  $('#post_admin_modal_date_select').attr('max', '10')
+  $('#post_admin_modal_date_select').attr('max', '9')
 });
 $('#post_select_box_M').click(function(){
   if (navigator.platform) {
@@ -316,7 +309,7 @@ $('#post_select_box_M').click(function(){
       $('.post_select_box_img').css('height', '280');
     }
   }
-  $('#post_admin_modal_date_select').attr('max', '15')
+  $('#post_admin_modal_date_select').attr('max', '14')
 });
 $('#post_select_box_S').click(function(){
   if (navigator.platform) {
@@ -327,7 +320,7 @@ $('#post_select_box_S').click(function(){
       $('.post_select_box_img').css('height', '220');
     }
   }
-  $('#post_admin_modal_date_select').attr('max', '20')
+  $('#post_admin_modal_date_select').attr('max', '19')
 });
 
 //창 이동!

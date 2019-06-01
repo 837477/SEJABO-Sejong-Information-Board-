@@ -104,8 +104,8 @@ def v(post_id):
    )
 
 def select_id(db, string):
-   with db.cursor() as cursor:
-      sql = "SELECT * FROM user WHERE student_id = %s LIMIT 1"
-      cursor.execute(sql,(string,))
-      result = cursor.fetchone()
-   return result
+	with db.cursor() as cursor:
+		sql = "SELECT * FROM user WHERE student_id = %s LIMIT 1"
+		cursor.execute(sql,(string,))
+		result = cursor.fetchone()
+	return result

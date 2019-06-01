@@ -13,6 +13,8 @@ ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg', 'gif'])
 BUILD_LIST = {"dae":101, "gwang":102, "hak":103, "yul":104}
 EXP_DATE_dict = {1:20, 2:15, 3:10, 4:7}
 
+#수정에서 이미 있는 게시물 방식 생각하기
+
 #게시물 삭제
 @bp.route('/delete_post/<int:post_id>')
 @jwt_required
@@ -35,7 +37,8 @@ def add_post():
       sql = "SELECT * from post where author = %s"
       cursor.execute(sql, (current_user['student_id'],))
       result = cursor.fetchone()
-   if current_user['student_id'] != 16011089 and result is not None: abort(400)
+   if current_user['student_id'] not in [16011089,16011075, 16011092] and result is not None:
+         abort(400)
    build = request.form['build']
    build = build.split(",")
    if len(build) == 0: abort(400)
@@ -46,12 +49,12 @@ def add_post():
    url = request.form.get('url')
    if url == "": url = None
    if not all(i in build for i in build):
-   	abort(400)
+      abort(400)
    if not (len(title) >= 1 and len(title) <= 500):
-   	abort(400)
+      abort(400)
    if size not in [1,2,3,4]: abort(400)
    if get_add_day(EXP_DATE_dict[size]) < exp_date:
-   	abort(400)
+      abort(400)
    try:
       datetime.datetime.strptime(exp_date,"%Y-%m-%d")
    except:
@@ -59,12 +62,17 @@ def add_post():
    if url is not None and url.startswith("http") is False: abort(400)
    img = request.files.get('img_url')
    if img is not None:
-      filename = str(current_user['student_id']) + "." + secure_filename(img.filename).split(".")[-1]
-      if not allowed_file(filename): abort(400)
+      filename = str(current_user['student_id']) +  get_today_datetime() + "." + secure_filename(img.filename).split(".")[-1]
+      print(filename)
+      if not allowed_file(filename):
+         print(111)
+         abort(400)
       img.save("." + UPLOAD_PATH + filename)
    else: 
       filename = None
-   if filename is not None and allowed_file(filename) is False: abort(400)
+   if filename is not None and allowed_file(filename) is False:
+      print(222)
+      abort(400)
    input_tuple = (
       current_user['student_id'],
       exp_date,
@@ -81,8 +89,8 @@ def add_post():
       cursor.execute(sql)
       result = cursor.fetchone()
       for i in build:
-      	sql = "insert into post_building values(%s,%s);"
-      	cursor.execute(sql,(BUILD_LIST[i],result["post_id"]))
+         sql = "insert into post_building values(%s,%s);"
+         cursor.execute(sql,(BUILD_LIST[i],result["post_id"]))
    g.db.commit()
    return jsonify(result = "success")
 
@@ -94,14 +102,11 @@ def modify_post():
    if current_user is None: abort(403)
    
    with g.db.cursor() as cursor:
-      sql = "SELECT * from post where author = %s"
+      sql = "SELECT * from post where author = %s LIMIT 1"
       cursor.execute(sql, (current_user['student_id'],))
       result = cursor.fetchone()
    if result is None:
-      print(0)
       abort(400)
-   print("sad")
-   print(request.form.get('title'))
    title = request.form['title']
    content = request.form['content']
    url = request.form.get('url')
