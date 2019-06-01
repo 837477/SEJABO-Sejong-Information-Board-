@@ -338,6 +338,7 @@ $('#post_admin_next_button').click(function(){
     if(post_creat_file_name.length != 0) 
     {
       var extension = post_creat_file_name.split('.')[1];
+      extension = extension.toLowerCase();
       if(extension != 'jpg' && extension != 'png' && extension != 'jpeg' && extension != 'gif')
       {
         alert("파일 확장자는 jpg / png / jpeg / gif 만 업로드 가능합니다.");

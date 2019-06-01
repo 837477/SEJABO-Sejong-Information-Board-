@@ -1,10 +1,4 @@
 var filter = "win16|win32|win64|mac|macintel";
-
-$(function () {
-   $('[data-toggle="tooltip"]').tooltip()
-})
-
-
 /*
 if (navigator.platform) {
     if (filter.indexOf(navigator.platform.toLowerCase()) < 0) {
@@ -106,10 +100,10 @@ function likeDivMakeNot(json_dislike_posts) {
          $('div').remove('#post_data_start_title'); //영역 문제로 인한 "게시 기간:" 삭제
          var new_post_box = receive_list_post_one;
          //해쉬이미지작업
-         var hash__ = MD5(receive_list_post_one['author_id']);
+         var hash__ = MD5(receive_list_post_one['author_id']+"");
          var data__ = new Identicon(hash__, img_options).toString();
          $('#profile_img_id').attr("src", "data:image/png;base64," + data__);
-         $('#profile_img_id').attr("data-original-title", new_post_box['author_major'] +" "+ new_post_box['author_id'] +" "+ new_post_box['author_name']);
+         $('#profile_img_id').attr("title", new_post_box['author_major'] +" "+ new_post_box['author_id'] +" "+ new_post_box['author_name']);
          var new_post_box_date_start = new Date(new_post_box['reg_date']+'+0900');
          var new_post_box_date_end = new Date(new_post_box['exp_date']+'+0900');
          var post_year_start = new_post_box_date_start.getFullYear();
@@ -129,6 +123,25 @@ function likeDivMakeNot(json_dislike_posts) {
          document.getElementById('post_content_content').appendChild(document.createElement("br"));
          document.getElementById('post_content_content').appendChild(document.createElement("br"));
          document.getElementById('post_content_content').append(new_post_box['content']);
+         document.getElementById('post_content_content').appendChild(document.createElement("br"));
+         document.getElementById('post_content_content').appendChild(document.createElement("br"));
+         document.getElementById('post_content_content').appendChild(document.createElement("br"));
+         if (new_post_box['build_dae'] == 1){
+            document.getElementById('post_content_content').append("#세종이노센터 ");
+         }
+         if (new_post_box['build_gwang'] == 1){
+            document.getElementById('post_content_content').append("#광개토관 ");
+         }
+         if (new_post_box['build_hak'] == 1){
+            document.getElementById('post_content_content').append("#학술정보원 ");
+         }
+         if (new_post_box['build_yul'] == 1){
+            document.getElementById('post_content_content').append("#율곡관 ");
+         }
+         if (new_post_box['url'] == null) {
+            $("a").remove('#post_content_url');
+            document.getElementById('post_content_content').style.height = '460px';
+         }
          if (new_post_box['url'] == null) {
             $("a").remove('#post_content_url');
             document.getElementById('post_content_content').style.height = '340px';
@@ -167,7 +180,7 @@ function likeDivMakeNot(json_dislike_posts) {
          var hash__ = MD5(receive_list_post_one['author_id']+"");
          var data__ = new Identicon(hash__, img_options).toString();
          $('#profile_img_id').attr("src", "data:image/png;base64," + data__);
-         $('#profile_img_id').attr("data-original-title", new_post_box['author_major'] +" "+ new_post_box['author_id'] +" "+ new_post_box['author_name']);
+         $('#profile_img_id').attr("title", new_post_box['author_major'] +" "+ new_post_box['author_id'] +" "+ new_post_box['author_name']);
          document.getElementById('post_modal_content').setAttribute('title', new_post_box['post_id']);
          var new_post_box_date_start = new Date(new_post_box['reg_date']+'+0900');
          var new_post_box_date_end = new Date(new_post_box['exp_date']+'+0900');
@@ -188,6 +201,25 @@ function likeDivMakeNot(json_dislike_posts) {
          document.getElementById('post_content_content').appendChild(document.createElement("br"));
          document.getElementById('post_content_content').appendChild(document.createElement("br"));
          document.getElementById('post_content_content').append(new_post_box['content']);
+         document.getElementById('post_content_content').appendChild(document.createElement("br"));
+         document.getElementById('post_content_content').appendChild(document.createElement("br"));
+         document.getElementById('post_content_content').appendChild(document.createElement("br"));
+         if (new_post_box['build_dae'] == 1){
+            document.getElementById('post_content_content').append("#세종이노센터 ");
+         }
+         if (new_post_box['build_gwang'] == 1){
+            document.getElementById('post_content_content').append("#광개토관 ");
+         }
+         if (new_post_box['build_hak'] == 1){
+            document.getElementById('post_content_content').append("#학술정보원 ");
+         }
+         if (new_post_box['build_yul'] == 1){
+            document.getElementById('post_content_content').append("#율곡관 ");
+         }
+         if (new_post_box['url'] == null) {
+            $("a").remove('#post_content_url');
+            document.getElementById('post_content_content').style.height = '460px';
+         }
          if (new_post_box['url'] == null) {
             $("a").remove('#post_content_url');
             document.getElementById('post_content_content').style.height = '460px';
@@ -212,7 +244,7 @@ function likeDivMakeNot(json_dislike_posts) {
             document.getElementById('post_content_text').style.paddingLeft="30px";
          }
          else{
-            document.getElementById('post_content_good').style.left = "30px";
+            document.getElementById('post_content_good').style.left = "0px";
             document.getElementById('post_content_img_image').setAttribute('src', '../static/img_save/' + new_post_box['img_url']);
          }
       }

@@ -2,6 +2,7 @@ from flask import *
 from werkzeug.security import *
 from flask_jwt_extended import *
 from iml_global import *
+import block_sort
 
 bp = Blueprint('board', __name__)
 
@@ -18,8 +19,8 @@ def get_post():
    )
 
 #게시물 불러오기: 입력값 존재 시 -> 특정 게시물 다 불러온다.
-@bp.route('/get_posts/<string:build>')
-def get_posts(build):
+@bp.route('/get_posts/<string:build>/<int:width>/<int:height>')
+def get_posts(build, width, height):
    if build not in ['yul','dae','hak','gwang']:
       abort(400)
    with g.db.cursor() as cursor:
@@ -28,8 +29,7 @@ def get_posts(build):
       sql = sql[0] + build + sql[1]
       cursor.execute(sql)
       result=cursor.fetchall()
-   if result is None:
-      abort(400)
+  # result = block_sort.main(result, width, height)
    return jsonify(
       list=result,
       result="success"
@@ -104,8 +104,8 @@ def v(post_id):
    )
 
 def select_id(db, string):
-	with db.cursor() as cursor:
-		sql = "SELECT * FROM user WHERE student_id = %s LIMIT 1"
-		cursor.execute(sql,(string,))
-		result = cursor.fetchone()
-	return result
+   with db.cursor() as cursor:
+      sql = "SELECT * FROM user WHERE student_id = %s LIMIT 1"
+      cursor.execute(sql,(string,))
+      result = cursor.fetchone()
+   return result
