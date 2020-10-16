@@ -1,8 +1,6 @@
 # SEJABO
 > 세종대학교 전자식 대자보 시스템
 
-## What is SEJABO?
-
 <p><img src="./rdm/main.png"></p>
 
 세종대학교 재학생으로 이러한 의문이 들었습니다.
