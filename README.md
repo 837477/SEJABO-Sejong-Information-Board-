@@ -9,11 +9,11 @@
 
 이러한 문제점을 보면서 착안한 아이디어가 바로 세종대학교 전자식 대자보인 SEJABO 것이죠.
 
-## Needs
+## Development environment
 
-- Python 3.X
-- MySQL 5.7.X
-- Web Browser
+- Mac OS
+- Python 3.7
+- MySQL 5.7.4
 
 ## Installation
 
